@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-label="Logo G.W².P">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1f7a4d"/><stop offset="1" stop-color="#0d4f38"/>
+    </linearGradient>
+  </defs>
+  <rect width="520" height="360" rx="48" fill="#f7fbf5"/>
+  <circle cx="260" cy="145" r="108" fill="#eaf5e9"/>
+  <path d="M260 245 C258 205 258 170 260 118" stroke="#7b4b2a" stroke-width="24" stroke-linecap="round"/>
+  <path d="M260 155 C215 132 188 105 175 72 M260 170 C310 137 338 105 350 72 M260 192 C220 175 196 160 181 141 M260 190 C302 171 327 153 341 132" fill="none" stroke="#7b4b2a" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="170" cy="78" r="27" fill="#e9b949"/><circle cx="350" cy="78" r="27" fill="#e9b949"/>
+  <circle cx="182" cy="143" r="23" fill="#d95b43"/><circle cx="339" cy="133" r="23" fill="#d95b43"/>
+  <circle cx="220" cy="111" r="20" fill="#e9b949"/><circle cx="304" cy="112" r="20" fill="#e9b949"/>
+  <path d="M145 248 Q260 214 375 248 Q340 292 260 300 Q180 292 145 248Z" fill="url(#g)"/>
+  <path d="M188 268 q18 -32 38 0 q18 -34 38 0 q18 -30 36 0" fill="none" stroke="#e9b949" stroke-width="8"/>
+  <g fill="#1f7a4d" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="260" y="326" font-size="43" font-weight="800">G.W².P</text>
+  </g>
+  <text x="260" y="349" font-size="13" fill="#6a5b3b" font-family="Arial, sans-serif" text-anchor="middle">GREEN WEALTH WAY PROGRAMME</text>
+</svg>
