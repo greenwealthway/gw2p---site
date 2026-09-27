@@ -1,19 +1,7 @@
-PACK D'IMAGES G.W².P — SITE WEB
-====================================
+G.W².P — MISE À JOUR CULTURES
 
-Images séparées prêtes à être placées dans le dossier "images/" du site :
-
-hero.jpg       → image principale / bannière
-mais.jpg       → culture du maïs
-manioc.jpg     → culture du manioc
-legumes.jpg    → maraîchage / légumes
-ananas.jpg     → plantation d'ananas
-terrain1.jpg   → paysage agricole / terrain
-terrain2.jpg   → parcelles agricoles / terrain
-recolte.jpg    → récolte / production
-irrigation.jpg → irrigation moderne
-
-Le logo officiel n'est pas inclus : tu as déjà installé ton nouveau logo.
-
-Ces visuels proviennent de la planche G.W².P créée précédemment et ont été séparés,
-agrandis et légèrement optimisés pour un affichage web plus propre.
+1. Remplacer l'ancien index.html par celui-ci.
+2. Envoyer dans le même dossier que index.html les images présentes dans ce ZIP.
+3. NE PAS supprimer les images déjà présentes sur le site : logo.png, hero.jpg, terrain1.jpg, terrain2.jpg, legumes.jpg, ananas.jpg, irrigation.jpg, recolte.jpg, mais.jpg, manioc.jpg.
+4. Les nouvelles images corrigent les cartes : chou, concombre Tokyo, gombo Kirikou, banane plantain, avocatier greffé, arachides, ignames et patate douce.
+5. accueil-gw2p.png et drapeau-congo.png servent à la page d'accueil.
