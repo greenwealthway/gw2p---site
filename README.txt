@@ -1,14 +1,14 @@
-G.W².P — VERSION CORRIGÉE DES CULTURES CLIQUABLES
+G.W².P — PACK COMPLET DES FICHES TECHNIQUES ILLUSTRÉES
 
-Cette version corrige le problème des fiches qui ne s'ouvraient pas.
-Les 12 cartes de cultures sont maintenant réellement cliquables et chaque clic ouvre une fiche complète personnalisée.
+Contenu :
+- index.html : version du site avec cultures, terrains et projet Papaye cliquables.
+- fiches/ : 12 fiches techniques illustrées personnalisées pour les cultures + 1 fiche Papaye + 1 planche d'ensemble.
+- Toutes les images nécessaires au fonctionnement des cartes et de la galerie sont incluses.
 
-À faire dans GitHub Pages :
-1. Ouvrir le dépôt GitHub du site.
-2. Remplacer l'ancien index.html par celui-ci.
-3. Conserver les images déjà présentes dans le dépôt, notamment logo.png, terrain1.jpg, terrain2.jpg, irrigation.jpg, recolte.jpg, legumes.jpg et ananas.jpg.
-4. Conserver également les nouvelles images incluses dans ce dossier.
-5. Enregistrer/Commit les modifications.
-6. Recharger le site puis toucher une carte comme « Maïs » ou « Manioc ».
+Installation GitHub Pages :
+1. Remplacer index.html dans le dépôt par celui de ce pack.
+2. Envoyer le dossier fiches/ et toutes les images à la racine du dépôt.
+3. Ne pas renommer les fichiers images.
+4. Enregistrer avec Commit changes.
 
-Important : il n'y a plus besoin d'un fichier de données externe pour les fiches cultures : les fiches sont intégrées directement dans index.html.
+Les indications techniques et les chiffres de production sont des bases de présentation et doivent être adaptés à la zone, au sol, à la saison, à l'eau disponible, aux variétés et aux prix locaux.
