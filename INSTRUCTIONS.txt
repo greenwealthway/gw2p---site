@@ -1,0 +1,7 @@
+REMPLACEMENT DE L'IMAGE D'ACCUEIL G.W².P
+
+1. Dans GitHub, ouvre le dépôt du site.
+2. Remplace l'ancien fichier 'accueil-gw2p.png' par celui-ci.
+3. Le fichier doit rester au même niveau que index.html.
+4. Ne change pas son nom : accueil-gw2p.png
+5. Attends quelques instants puis actualise le site.
