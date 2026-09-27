@@ -72,7 +72,7 @@
 </main>
 <footer><div class="wrap"><div><strong>G.W².P — GREEN WEALTH WAY PROGRAMME</strong><br/><small>Développons ensemble une agriculture créatrice de valeur.</small></div><div>© 2026 G.W².P</div></div></footer>
 <script>
-const data = {
+const cultureData = {
     'mais': {cat:'CÉRÉALE', sol:'Sol meuble, fertile et bien drainé, avec une bonne matière organique.', implantation:'Parcelle bien ensoleillée, préparation fine du sol et semis avec espacement régulier.', cycle:'Environ 3 à 4 mois selon la variété et l’objectif de production.', eau:'Besoins importants aux phases sensibles. Éviter l’excès d’eau et la stagnation.', entretien:'Désherbage précoce, fertilisation selon le sol et surveillance des ravageurs et maladies.', recolte:'Épis frais ou grains secs. Possibilité de valorisation alimentaire et commerciale.'},
     'manioc': {cat:'TUBERCULE', sol:'Sol profond, meuble et bien drainé, favorable au développement des racines.', implantation:'Utiliser des boutures saines et choisir la parcelle selon la fertilité et la disponibilité en eau.', cycle:'Environ 8 à 18 mois selon la variété et le marché visé.', eau:'Besoins surtout importants à l’installation. Bonne tolérance à la sécheresse une fois établi.', entretien:'Désherbage, remplacement des plants manquants et surveillance sanitaire régulière.', recolte:'Tubercules frais, farine, cossettes et autres produits transformés.'},
     'legumes': {cat:'MARAÎCHAGE', sol:'Sol fertile, riche en matière organique, meuble et bien drainé.', implantation:'Planifier selon la saison, le marché et l’irrigation disponible. Pépinière lorsque nécessaire.', cycle:'Environ 1,5 à 4 mois selon les espèces cultivées.', eau:'Irrigation régulière et maîtrisée pour maintenir une croissance homogène.', entretien:'Pépinière, désherbage, fertilisation et protection phytosanitaire raisonnée.', recolte:'Récoltes échelonnées permettant d’approvisionner régulièrement le marché.'},
@@ -92,7 +92,7 @@ window.openCulture = function(slug) {
   const title = document.getElementById('cultureModalTitle');
   const category = document.getElementById('cultureModalCategory');
   const body = document.getElementById('cultureModalBody');
-  const item = data[slug];
+  const item = cultureData[slug];
   if (!modal || !item) return;
   const card = document.querySelector('.culture-card[data-culture="' + slug + '"]');
   const h3 = card ? card.querySelector('h3') : null;
@@ -153,6 +153,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const terrainClose = terrainModal ? terrainModal.querySelector('.terrain-close') : null;
   if (terrainClose) terrainClose.addEventListener('click', window.closeTerrain);
   if (terrainModal) terrainModal.addEventListener('click', function(e) { if (e.target === terrainModal) window.closeTerrain(); });
+  document.querySelectorAll('.culture-card').forEach(function(card){
+    card.addEventListener('click', function(e){ e.preventDefault(); window.openCulture(card.dataset.culture); });
+    card.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); window.openCulture(card.dataset.culture); } });
+  });
   document.querySelectorAll('.terrain-card').forEach(function(card){card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openTerrain(card.dataset.terrain);}});});
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { window.closeCulture(); window.closeTerrain(); } });
 });
