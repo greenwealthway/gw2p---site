@@ -137,7 +137,7 @@ window.openCulture = function(slug) {
   title.textContent = h3 ? h3.textContent : 'Projet de culture';
   category.textContent = item.cat;
   body.innerHTML = `
-    <img class="fiche-infographic" src="fiches/${slug}.png" alt="Fiche technique illustrée de ${h3 ? h3.textContent : 'la culture'}">
+    <img class="fiche-infographic" src="fiche-${slug}.png" alt="Fiche technique illustrée de ${h3 ? h3.textContent : 'la culture'}">
     <p class="fiche-caption">Chaque étape de cette fiche est illustrée et personnalisée pour la culture sélectionnée.</p>
     <div class="modal-grid">
       <div class="box"><h3>🎯 Objectif du projet</h3><p>${project.objectif}</p></div>
@@ -184,7 +184,7 @@ const papayaData = {
 };
 window.openPapaya = function(){
  const modal=document.getElementById('papayaModal'); if(!modal)return;
- document.getElementById('papayaModalBody').innerHTML=`<img class="fiche-infographic" src="fiches/papaye.png" alt="Fiche technique illustrée du projet Papaye"><p class="fiche-caption">Fiche illustrée du projet papaye de 5 hectares.</p><div class="modal-grid">
+ document.getElementById('papayaModalBody').innerHTML=`<img class="fiche-infographic" src="fiche-papaye.png" alt="Fiche technique illustrée du projet Papaye"><p class="fiche-caption">Fiche illustrée du projet papaye de 5 hectares.</p><div class="modal-grid">
  <div class="box"><h3>📐 Surface</h3><p>${papayaData.surface}</p></div>
  <div class="box"><h3>🌱 Variété</h3><p>${papayaData.variety}</p></div>
  <div class="box"><h3>📍 Zone adaptée</h3><p>${papayaData.zone}</p></div>
