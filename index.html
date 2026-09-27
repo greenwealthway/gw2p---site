@@ -1,610 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>G.W².P - Green Wealth Way Programme</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f7f5ed;
-      color: #173b28;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #0f3524;
-      color: white;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .header-content {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo img {
-      width: 55px;
-      height: 55px;
-      object-fit: contain;
-    }
-
-    .logo h1 {
-      color: #d4af37;
-      font-size: 20px;
-    }
-
-    .logo p {
-      font-size: 10px;
-    }
-
-    nav {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: #0f3524;
-      color: white;
-    }
-
-    .hero img {
-      width: 140px;
-      margin-bottom: 20px;
-    }
-
-    .hero h2 {
-      color: #d4af37;
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .hero h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 18px;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 25px;
-      background: #d4af37;
-      color: #0f3524;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 60px 20px;
-    }
-
-    .container {
-      max-width: 1050px;
-      margin: auto;
-    }
-
-    .title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .title h2 {
-      font-size: 32px;
-      color: #0f3524;
-      margin-bottom: 8px;
-    }
-
-    .line {
-      width: 60px;
-      height: 4px;
-      background: #d4af37;
-      margin: auto;
-    }
-
-    .about {
-      background: white;
-    }
-
-    .about p {
-      max-width: 850px;
-      margin: 0 auto 15px;
-      text-align: center;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
-
-    .card h3 {
-      color: #0f3524;
-      margin-bottom: 10px;
-    }
-
-    .card .icon {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .partnership {
-      background: #edf3ed;
-    }
-
-    .formula {
-      text-align: center;
-      margin-top: 30px;
-      font-size: 20px;
-      font-weight: bold;
-      color: #0f3524;
-    }
-
-    .cultures {
-      background: white;
-    }
-
-    .culture {
-      border-left: 5px solid #d4af37;
-      padding: 20px;
-      background: #f7f5ed;
-      border-radius: 10px;
-    }
-
-    .culture h3 {
-      color: #0f3524;
-      margin-bottom: 8px;
-    }
-
-    .zones {
-      background: #0f3524;
-      color: white;
-    }
-
-    .zones .title h2 {
-      color: white;
-    }
-
-    .zone {
-      padding: 20px;
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 12px;
-    }
-
-    .zone h3 {
-      color: #d4af37;
-      margin-bottom: 8px;
-    }
-
-    .contact {
-      background: #edf3ed;
-    }
-
-    .contact-box {
-      max-width: 700px;
-      margin: auto;
-      background: white;
-      padding: 35px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.1);
-    }
-
-    .phone {
-      color: #d4af37;
-      font-size: 27px;
-      font-weight: bold;
-      margin: 20px 0;
-    }
-
-    footer {
-      background: #082719;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
-
-    footer strong {
-      color: #d4af37;
-    }
-
-    @media (max-width: 700px) {
-      .header-content {
-        flex-direction: column;
-      }
-
-      nav {
-        justify-content: center;
-      }
-
-      .hero h2 {
-        font-size: 34px;
-      }
-
-      .hero h3 {
-        font-size: 20px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>G.W².P | Green Wealth Way Programme</title>
+<meta name="description" content="G.W².P — Green Wealth Way Programme, nouveau programme de développement agricole en République du Congo, fondé sur un partenariat gagnant-gagnant entre financeurs, propriétaires de terres et partenaires du projet.">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
+<div class="topbar">
+  <div class="wrap">
+    <span>G.W².P • GREEN WEALTH WAY PROGRAMME</span>
+    <span>« La richesse dans la nature »</span>
+  </div>
+</div>
+
 <header>
-
-  <div class="header-content">
-
-    <div class="logo">
-
-      <!-- TON LOGO -->
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
       <img src="logo.png" alt="Logo G.W².P">
-
-      <div>
-        <h1>G.W².P</h1>
-        <p>GREEN WEALTH WAY PROGRAMME</p>
-      </div>
-
-    </div>
-
+      <strong>G.W².P</strong>
+    </a>
     <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#programme">Programme</a>
+      <a href="#projet">Le programme</a>
       <a href="#partenariat">Partenariat</a>
       <a href="#cultures">Cultures</a>
+      <a href="#methode">Méthode</a>
+      <a href="#financement">Financement</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </div>
-
 </header>
 
+<main>
 
-<!-- ACCUEIL -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Nouveau programme • Développement agricole</div>
+      <h1>G.W².P<br><span>Green Wealth Way Programme</span></h1>
+      <h2>LA RICHESSE DANS LA NATURE</h2>
+      <p><strong>Développons ensemble une agriculture créatrice de valeur.</strong> G.W².P propose un modèle de collaboration entre financeurs, propriétaires de terres et partenaires du projet afin de développer des activités agricoles adaptées aux réalités de chaque zone en République du Congo.</p>
 
-<section class="hero" id="accueil">
+      <div class="pills">
+        <span class="pill">Partout en République du Congo</span>
+        <span class="pill">Partenariat gagnant-gagnant</span>
+        <span class="pill">Cultures adaptées aux zones</span>
+        <span class="pill">Financement à moindre coût</span>
+      </div>
 
-  <img src="logo.png" alt="G.W².P">
-
-  <h2>G.W².P</h2>
-
-  <h3>GREEN WEALTH WAY PROGRAMME</h3>
-
-  <p>
-    Développons ensemble une agriculture créatrice
-    de valeur, durable et rentable en République du Congo.
-  </p>
-
-  <a class="button" href="#programme">
-    Découvrir le programme
-  </a>
-
-</section>
-
-
-<!-- PROGRAMME -->
-
-<section class="about" id="programme">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Notre programme</h2>
-      <div class="line"></div>
+      <div class="actions">
+        <a class="btn primary" href="#partenariat">Découvrir le programme</a>
+        <a class="btn gold" href="#cultures">Explorer les cultures</a>
+        <a class="btn" href="#contact">Nous contacter</a>
+      </div>
     </div>
 
-    <p>
-      <strong>G.W².P – Green Wealth Way Programme</strong>
-      est un programme de développement agricole en
-      République du Congo.
-    </p>
-
-    <p>
-      Notre objectif est de favoriser la création de valeur
-      en mettant en relation les financeurs, les propriétaires
-      de terres et les partenaires du projet.
-    </p>
-
-    <p>
-      Les cultures sont choisies en fonction de la zone,
-      des terres disponibles et des moyens financiers
-      mobilisés pour chaque projet.
-    </p>
-
+    <div class="hero-logo">
+      <img src="logo.png" alt="Logo G.W².P">
+      <h3>Mr Ahesrom Louange NOMARITH</h3>
+      <p class="muted">Promoteur du projet</p>
+      <p><strong>Développement agricole • République du Congo</strong></p>
+    </div>
   </div>
-
 </section>
 
-
-<!-- PARTENARIAT -->
-
-<section class="partnership" id="partenariat">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Partenariat gagnant-gagnant</h2>
-      <div class="line"></div>
+<section id="projet">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Notre vision</div>
+      <h2>Un programme agricole adapté à chaque réalité</h2>
+      <p>G.W².P est un nouveau programme de développement agricole qui cherche à transformer les terres disponibles et les possibilités de financement en activités productives, organisées et créatrices de valeur.</p>
     </div>
 
-    <div class="cards">
+    <div class="stats">
+      <div class="stat"><b>1</b><span>programme national</span></div>
+      <div class="stat"><b>3</b><span>acteurs partenaires</span></div>
+      <div class="stat"><b>10+</b><span>cultures présentées</span></div>
+      <div class="stat"><b>100%</b><span>adaptable au terrain</span></div>
+    </div>
 
+    <div class="grid" style="margin-top:20px">
       <div class="card">
-
-        <div class="icon">💰</div>
-
-        <h3>Financeurs</h3>
-
-        <p>
-          Apportent les moyens financiers nécessaires
-          au développement des projets.
-        </p>
-
+        <h3>Notre objectif</h3>
+        <p>Créer des opportunités agricoles en réunissant les moyens financiers, les terres disponibles et les compétences nécessaires à la réalisation des projets.</p>
       </div>
-
       <div class="card">
-
-        <div class="icon">🌱</div>
-
-        <h3>Propriétaires de terres</h3>
-
-        <p>
-          Mettent leurs terres à disposition pour
-          développer des activités agricoles.
-        </p>
-
+        <h3>Notre principe</h3>
+        <p>Construire un <strong>partenariat gagnant-gagnant</strong> entre les financeurs, les propriétaires de terres et les partenaires du projet.</p>
       </div>
-
       <div class="card">
-
-        <div class="icon">🤝</div>
-
-        <h3>Partenaires</h3>
-
-        <p>
-          Participent à la réalisation et au développement
-          des projets agricoles.
-        </p>
-
+        <h3>Notre approche</h3>
+        <p>Choisir les cultures, les superficies et les investissements selon la zone, la qualité du terrain, les ressources disponibles et les moyens financiers mobilisables.</p>
       </div>
-
     </div>
 
-    <div class="formula">
-      Financeurs + Terres + Partenaires
-      <br>
-      ↓
-      <br>
-      Création de valeur
+    <div class="notice" style="margin-top:20px">
+      <strong>Important :</strong> chaque projet est étudié et personnalisé. Les rendements, coûts, prix et revenus dépendent notamment de la zone, des conditions du terrain, des techniques utilisées et du marché.
     </div>
-
   </div>
-
 </section>
 
-
-<!-- CULTURES -->
-
-<section class="cultures" id="cultures">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Nos cultures</h2>
-      <div class="line"></div>
+<section id="partenariat">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Partenariat G.W².P</div>
+      <h2>Un modèle gagnant-gagnant</h2>
+      <p>Le programme met en relation les ressources et les compétences nécessaires au développement des exploitations agricoles.</p>
     </div>
 
-    <div class="cards">
-
-      <div class="culture">
-
-        <h3>🌽 Maïs</h3>
-
-        <p>
-          Culture pouvant être développée dans différentes
-          zones agricoles selon les conditions du terrain.
-        </p>
-
+    <div class="grid">
+      <div class="card">
+        <h3>01. Financeurs</h3>
+        <p>Apportent les ressources financières nécessaires au lancement ou au développement des activités agricoles, selon le montage convenu.</p>
       </div>
-
-      <div class="culture">
-
-        <h3>🌿 Manioc</h3>
-
-        <p>
-          Culture importante pouvant contribuer à la
-          diversification de la production agricole.
-        </p>
-
+      <div class="card">
+        <h3>02. Propriétaires de terres</h3>
+        <p>Metttent à disposition des terres adaptées au projet, selon des modalités définies entre les parties.</p>
       </div>
-
-      <div class="culture">
-
-        <h3>🥕 Maraîchage</h3>
-
-        <p>
-          Production de légumes adaptée notamment aux
-          projets disposant d'un système d'irrigation.
-        </p>
-
+      <div class="card">
+        <h3>03. Partenaires du projet</h3>
+        <p>Participent à la planification, à la production, au suivi, à la commercialisation et au développement de l'activité.</p>
       </div>
-
-      <div class="culture">
-
-        <h3>🍍 Fruits</h3>
-
-        <p>
-          Développement de cultures fruitières selon les
-          caractéristiques et les opportunités de chaque zone.
-        </p>
-
-      </div>
-
     </div>
 
+    <div class="card" style="margin-top:20px">
+      <h3>Une collaboration construite autour d'intérêts communs</h3>
+      <p><strong>Financeurs + Propriétaires de terres + Partenaires = Partenariat gagnant-gagnant</strong></p>
+      <p class="muted">Les responsabilités, apports, modalités de financement, partage des récoltes ou revenus et conditions de collaboration doivent être définis dans un accord adapté à chaque projet.</p>
+    </div>
   </div>
-
 </section>
 
-
-<!-- ZONES -->
-
-<section class="zones">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Des projets adaptés aux zones</h2>
-      <div class="line"></div>
+<section id="cultures">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Portefeuille de production</div>
+      <h2>Les cultures proposées par G.W².P</h2>
+      <p>Les cultures sont sélectionnées en fonction de la zone, des caractéristiques du terrain, de l'eau disponible, du calendrier agricole et des moyens mobilisables.</p>
     </div>
 
-    <div class="cards">
-
-      <div class="zone">
-
-        <h3>Zone rurale</h3>
-
-        <p>
-          Développement de projets agricoles sur des
-          superficies adaptées aux ressources disponibles.
-        </p>
-
-      </div>
-
-      <div class="zone">
-
-        <h3>Zone périurbaine</h3>
-
-        <p>
-          Possibilité de développer des productions
-          maraîchères et des cultures à cycle court.
-        </p>
-
-      </div>
-
-      <div class="zone">
-
-        <h3>Zone à fort potentiel</h3>
-
-        <p>
-          Identification des cultures correspondant
-          aux caractéristiques et aux opportunités locales.
-        </p>
-
-      </div>
-
+    <div class="grid">
+      <div class="card"><h3>Ananas</h3><p>Culture fruitière destinée à des projets adaptés aux conditions locales.</p><a class="btn" href="ananas.html">Voir la fiche</a></div>
+      <div class="card"><h3>Avocatier greffé</h3><p>Arboriculture fruitière pouvant être intégrée dans des projets de moyen et long terme.</p><a class="btn" href="avocatier-greffe.html">Voir la fiche</a></div>
+      <div class="card"><h3>Banane plantain</h3><p>Culture vivrière à intégrer selon les conditions du terrain et les débouchés.</p><a class="btn" href="banane-plantain.html">Voir la fiche</a></div>
+      <div class="card"><h3>Chou</h3><p>Culture maraîchère à cycle relativement court, selon la saison et la zone.</p><a class="btn" href="chou.html">Voir la fiche</a></div>
+      <div class="card"><h3>Concombre Tokyo</h3><p>Culture maraîchère pouvant contribuer à diversifier la production.</p><a class="btn" href="concombre-tokyo.html">Voir la fiche</a></div>
+      <div class="card"><h3>Gombo Kirikou</h3><p>Culture maraîchère à adapter au calendrier et aux conditions locales.</p><a class="btn" href="gombo-kirikou.html">Voir la fiche</a></div>
+      <div class="card"><h3>Manguier amélioré</h3><p>Arboriculture fruitière destinée à construire une production durable.</p><a class="btn" href="manguier-ameliore.html">Voir la fiche</a></div>
+      <div class="card"><h3>Papayer Solo</h3><p>Culture fruitière pouvant être associée à d'autres productions.</p><a class="btn" href="papayer-solo.html">Voir la fiche</a></div>
+      <div class="card"><h3>Piment jaune</h3><p>Culture maraîchère à intégrer selon les débouchés et les capacités de production.</p><a class="btn" href="piment-jaune.html">Voir la fiche</a></div>
+      <div class="card"><h3>Tomate Cobra 26</h3><p>Culture maraîchère pouvant être planifiée selon la saison, l'eau et le marché.</p><a class="btn" href="tomate-cobra-26.html">Voir la fiche</a></div>
     </div>
-
   </div>
-
 </section>
 
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>Contactez-nous</h2>
-      <div class="line"></div>
+<section id="methode">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Méthode G.W².P</div>
+      <h2>De la terre au marché</h2>
     </div>
 
-    <div class="contact-box">
-
-      <h3>G.W².P</h3>
-
-      <p>
-        Vous êtes financeur, propriétaire de terre ou
-        partenaire et souhaitez participer à un projet
-        agricole ?
-      </p>
-
-      <div class="phone">
-        242.06.429.86.80
-      </div>
-
-      <p>
-        République du Congo
-      </p>
-
-      <a class="button" href="tel:+242064298680">
-        Appeler maintenant
-      </a>
-
+    <div class="grid">
+      <div class="card"><h3>01. Diagnostic</h3><p>Étudier le sol, l'eau, le relief, l'accès, le climat local et les caractéristiques de la zone.</p></div>
+      <div class="card"><h3>02. Conception</h3><p>Définir les cultures, les superficies et les équipements en fonction des possibilités réelles du projet.</p></div>
+      <div class="card"><h3>03. Montage</h3><p>Définir les apports des financeurs, propriétaires de terres et partenaires ainsi que les modalités de collaboration.</p></div>
+      <div class="card"><h3>04. Installation</h3><p>Préparer les parcelles, l'eau, les pépinières, les équipements et les infrastructures nécessaires.</p></div>
+      <div class="card"><h3>05. Production</h3><p>Mettre en œuvre les techniques agricoles, l'irrigation, la fertilisation, l'entretien et le suivi.</p></div>
+      <div class="card"><h3>06. Récolte et vente</h3><p>Organiser la récolte, le tri, le stockage, le transport et la commercialisation.</p></div>
+      <div class="card"><h3>07. Suivi économique</h3><p>Comparer les coûts, volumes, prix, pertes et résultats pour améliorer les campagnes suivantes.</p></div>
     </div>
-
   </div>
-
 </section>
 
+<section id="financement">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Financement</div>
+      <h2>Un financement adapté au projet</h2>
+      <p>Le programme recherche des solutions de financement à moindre coût, adaptées aux besoins et aux capacités du projet.</p>
+    </div>
 
-<!-- PIED DE PAGE -->
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Bloc</th><th>Contenu</th><th>Statut</th></tr></thead>
+        <tbody>
+          <tr><td>Études</td><td>Analyse du terrain, implantation et planification</td><td>À chiffrer</td></tr>
+          <tr><td>Eau</td><td>Source d'eau, pompe, réservoir et irrigation</td><td>À chiffrer</td></tr>
+          <tr><td>Installation</td><td>Préparation des parcelles, accès et infrastructures</td><td>À chiffrer</td></tr>
+          <tr><td>Intrants</td><td>Semences, plants, fertilisation et protection autorisée</td><td>À chiffrer</td></tr>
+          <tr><td>Équipements</td><td>Outils, matériel de récolte et stockage</td><td>À chiffrer</td></tr>
+          <tr><td>Main-d'œuvre</td><td>Installation, entretien, surveillance et récolte</td><td>À chiffrer</td></tr>
+          <tr><td>Commercialisation</td><td>Emballage, transport, prospection et communication</td><td>À chiffrer</td></tr>
+          <tr><td>Financement</td><td>Montage financier et trésorerie de sécurité</td><td>Selon projet</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>Chaque projet est personnalisé</h3>
+      <p>La superficie, les cultures, les investissements et le budget sont déterminés après étude de la terre, de la zone, des ressources disponibles et des objectifs des partenaires.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Contact officiel du programme</div>
+      <h2>G.W².P — GREEN WEALTH WAY PROGRAMME</h2>
+      <p>« La richesse dans la nature »</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Promoteur</h3>
+        <p><strong>Mr Ahesrom Louange NOMARITH</strong></p>
+        <p class="muted">Projet agricole • République du Congo</p>
+      </div>
+      <div class="card">
+        <h3>WhatsApp</h3>
+        <p><a class="btn primary" href="https://wa.me/242064298680">+242 06 429 86 80</a></p>
+      </div>
+      <div class="card">
+        <h3>Email</h3>
+        <p><a class="btn" href="mailto:nomarithlouangeahesrom@gmail.com">nomarithlouangeahesrom@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer>
-
-  <p>
-    © 2026 <strong>G.W².P</strong> -
-    Green Wealth Way Programme
-  </p>
-
-  <p>
-    Développons ensemble une agriculture créatrice de valeur.
-  </p>
-
+  <div class="wrap">
+    <div class="grid">
+      <div><h3>G.W².P</h3><p>GREEN WEALTH WAY PROGRAMME</p><p>« La richesse dans la nature »</p></div>
+      <div><h3>Promoteur</h3><p>Mr Ahesrom Louange NOMARITH</p></div>
+      <div><h3>Programme</h3><p>Développement agricole et partenariat gagnant-gagnant</p><p><a href="#cultures">Voir les fiches cultures →</a></p></div>
+    </div>
+    <p class="muted">© 2026 G.W².P. Les données techniques et économiques sont indicatives et doivent être validées localement avant investissement.</p>
+  </div>
 </footer>
 
 </body>
