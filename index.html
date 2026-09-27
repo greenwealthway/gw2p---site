@@ -52,7 +52,7 @@
 <article class="card culture-card" data-culture="patate-douce" tabindex="0" role="button" aria-label="Voir la fiche de Patate douce" onclick="openCulture(\'patate-douce\')" onkeydown="if(event.key===\'Enter\'||event.key===\' \'){event.preventDefault();openCulture(\'patate-douce\')}"><img src="patate-douce.jpg" alt="Patate douce"><div class="card-body"><span class="tag">TUBERCULE</span><h3>Patate douce</h3><p>Culture vivrière pouvant compléter la diversification de l'exploitation.</p><div class="culture-more">Voir la fiche complète <span>→</span></div></div></article>
 
 </div></div></section>
-<section id="terrains" class="dark-section"><div class="wrap"><div class="section-head"><div class="label">Terrains & exploitation</div><h2>Des espaces agricoles à valoriser</h2><p>Présentation des espaces disponibles, exploités et des équipements nécessaires à leur développement.</p></div><div class="cards"><article class="card"><img src="terrain1.jpg" alt="Terrain agricole"><div class="card-body"><span class="tag">TERRAIN</span><h3>Terrain à valoriser</h3><p>Étude du potentiel, de la zone et des cultures adaptées.</p></div></article><article class="card"><img src="terrain2.jpg" alt="Terrain exploité"><div class="card-body"><span class="tag">EXPLOITATION</span><h3>Terrain exploité</h3><p>Organisation des activités agricoles et suivi de la production.</p></div></article><article class="card"><img src="irrigation.jpg" alt="Irrigation agricole"><div class="card-body"><span class="tag">IRRIGATION</span><h3>Gestion de l'eau</h3><p>Solutions d'irrigation adaptées aux besoins de la production.</p></div></article></div></div></section>
+<section id="terrains" class="dark-section"><div class="wrap"><div class="section-head"><div class="label">Terrains & exploitation</div><h2>Des espaces agricoles à valoriser</h2><p>Présentation des espaces disponibles, exploités et des équipements nécessaires à leur développement.</p></div><div class="cards"><article class="card terrain-card" tabindex="0" role="button" data-terrain="valoriser" onclick="openTerrain('valoriser')"><img src="terrain1.jpg" alt="Terrain agricole à valoriser"><div class="card-body"><span class="tag">TERRAIN</span><h3>Terrain à valoriser</h3><p>Étude du potentiel, de la zone et des cultures adaptées.</p><strong style="color:#17634a">Voir la fiche complète →</strong></div></article><article class="card terrain-card" tabindex="0" role="button" data-terrain="exploite" onclick="openTerrain('exploite')"><img src="terrain2.jpg" alt="Terrain agricole exploité"><div class="card-body"><span class="tag">EXPLOITATION</span><h3>Terrain exploité</h3><p>Organisation des activités agricoles et suivi de la production.</p><strong style="color:#17634a">Voir la fiche complète →</strong></div></article><article class="card terrain-card" tabindex="0" role="button" data-terrain="irrigation" onclick="openTerrain('irrigation')"><img src="irrigation.jpg" alt="Gestion de l'eau et irrigation agricole"><div class="card-body"><span class="tag">IRRIGATION</span><h3>Gestion de l'eau</h3><p>Solutions d'irrigation adaptées aux besoins de la production.</p><strong style="color:#17634a">Voir la fiche complète →</strong></div></article></div></div></section>
 <section id="methode"><div class="wrap"><div class="section-head"><div class="label">Méthode G.W².P</div><h2>Du terrain à la récolte</h2><p>Une démarche structurée pour transformer un potentiel agricole en projet concret.</p></div><div class="steps"><div class="step"><div class="num">1</div><h3>Étudier</h3><p>Identifier la zone, le terrain, les ressources et les possibilités agricoles.</p></div><div class="step"><div class="num">2</div><h3>Planifier</h3><p>Choisir les cultures et organiser les besoins, le calendrier et les équipes.</p></div><div class="step"><div class="num">3</div><h3>Produire</h3><p>Mettre en œuvre les opérations agricoles avec un suivi régulier.</p></div><div class="step"><div class="num">4</div><h3>Récolter & valoriser</h3><p>Organiser la récolte et la valorisation de la production.</p></div></div></div></section>
 <section id="financement" style="background:#fff"><div class="wrap"><div class="section-head"><div class="label">Financement</div><h2>Des projets adaptés aux moyens disponibles</h2><p>Le choix des cultures et l'ampleur du projet sont adaptés aux moyens financiers mobilisables.</p></div><div class="grid2"><div class="photo"><img src="recolte.jpg" alt="Récolte agricole"></div><div class="box"><h3>Financement à moindre coût</h3><p>Chaque projet peut être étudié à partir de ses besoins réels : préparation du terrain, semences, matériel, irrigation, entretien, main-d'œuvre et récolte.</p><ul class="check"><li>État des besoins du projet</li><li>Budget adapté à la surface</li><li>Organisation progressive des investissements</li><li>Suivi des activités et des résultats</li></ul></div></div></div></section>
 <section id="galerie"><div class="wrap"><div class="section-head"><div class="label">Galerie</div><h2>La terre, les cultures et les récoltes</h2><p>Une présentation visuelle des activités et du potentiel agricole.</p></div><div class="gallery"><img src="hero.jpg" alt="Agriculture G.W².P"><img src="mais.jpg" alt="Maïs"><img src="manioc.jpg" alt="Manioc"><img src="legumes.jpg" alt="Légumes"><img src="ananas.jpg" alt="Ananas"><img src="chou.jpg" alt="Chou"><img src="irrigation.jpg" alt="Irrigation"><img src="recolte.jpg" alt="Récolte"></div></div></section>
@@ -60,12 +60,14 @@
 
 <div class="modal" id="cultureModal" aria-hidden="true">
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="cultureModalTitle">
-    <div class="modal-head">
-      <button class="modal-close" type="button" aria-label="Fermer">×</button>
-      <h2 id="cultureModalTitle">Fiche culture</h2>
-      <p id="cultureModalCategory"></p>
-    </div>
+    <div class="modal-head"><button class="modal-close" type="button" aria-label="Fermer">×</button><h2 id="cultureModalTitle">Fiche culture</h2><p id="cultureModalCategory"></p></div>
     <div class="modal-body" id="cultureModalBody"></div>
+  </div>
+</div>
+<div class="modal" id="terrainModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="terrainModalTitle">
+    <div class="modal-head"><button class="modal-close terrain-close" type="button" aria-label="Fermer">×</button><h2 id="terrainModalTitle">Fiche terrain</h2><p id="terrainModalCategory"></p></div>
+    <div class="modal-body" id="terrainModalBody"></div>
   </div>
 </div>
 </main>
@@ -121,12 +123,40 @@ window.closeCulture = function() {
   document.body.style.overflow='';
 };
 
+const terrainData = {
+  valoriser: {cat:'TERRAIN À VALORISER', title:'Terrain à valoriser', potentiel:'Parcelle destinée à être étudiée avant la mise en production : accès, superficie, eau, relief, sol et possibilités d’exploitation.', preparation:'Défrichage raisonné, nettoyage, délimitation de la parcelle, préparation du sol et organisation des accès selon le projet.', cultures:'Le choix des cultures se fait selon la zone, le sol, la saison, l’eau disponible et les objectifs économiques du projet. Les cultures G.W².P peuvent être sélectionnées après étude.', eau:'Identifier la source d’eau et prévoir une solution d’irrigation adaptée lorsque nécessaire.', exploitation:'Mise en production progressive, avec calendrier des travaux, suivi des intrants, main-d’œuvre et opérations culturales.', financement:'Possibilité d’étudier un projet avec propriétaire de terrain, financeur et partenaires dans une logique de partenariat gagnant-gagnant.'},
+  exploite: {cat:'TERRAIN EXPLOITÉ', title:'Terrain exploité', potentiel:'Espace agricole déjà engagé dans une activité de production et pouvant être amélioré ou diversifié.', preparation:'Évaluer l’existant : cultures, état des parcelles, accès, équipements, main-d’œuvre et organisation des travaux.', cultures:'Optimisation des cultures existantes ou diversification selon le potentiel de la parcelle et la demande du marché.', eau:'Suivi des besoins hydriques et amélioration progressive du système d’irrigation si nécessaire.', exploitation:'Planification des semis, entretien, suivi phytosanitaire, récolte et valorisation des productions.', financement:'Les besoins peuvent être étudiés par étape : amélioration du terrain, équipements, intrants, irrigation et développement de la production.'},
+  irrigation: {cat:'EAU & IRRIGATION', title:"Gestion de l'eau", potentiel:'Organisation de l’accès à l’eau pour sécuriser la production agricole et limiter les effets des périodes sèches.', preparation:'Identifier la source d’eau, le point de pompage ou de stockage, les distances et les besoins des parcelles.', cultures:'Adapter le système aux cultures retenues et à leurs besoins en eau, avec une attention particulière au maraîchage.', eau:'Mise en place d’un arrosage régulier et maîtrisé : stockage, distribution, tuyaux, goutte-à-goutte ou autre solution adaptée au terrain.', exploitation:'Contrôle des équipements, entretien des conduites et programmation des arrosages selon les conditions de la parcelle.', financement:'L’équipement peut être dimensionné progressivement selon la superficie, les cultures et les moyens financiers disponibles.'}
+};
+
+window.openTerrain = function(slug) {
+  const modal=document.getElementById('terrainModal'); const item=terrainData[slug];
+  if(!modal || !item) return;
+  document.getElementById('terrainModalTitle').textContent=item.title;
+  document.getElementById('terrainModalCategory').textContent=item.cat;
+  document.getElementById('terrainModalBody').innerHTML=`<div class="modal-grid">
+    <div class="box"><h3>🌍 Potentiel</h3><p>${item.potentiel}</p></div>
+    <div class="box"><h3>🛠️ Préparation</h3><p>${item.preparation}</p></div>
+    <div class="box"><h3>🌱 Cultures adaptées</h3><p>${item.cultures}</p></div>
+    <div class="box"><h3>💧 Eau & irrigation</h3><p>${item.eau}</p></div>
+    <div class="box"><h3>🧑‍🌾 Exploitation</h3><p>${item.exploitation}</p></div>
+    <div class="box"><h3>🤝 Financement & partenariat</h3><p>${item.financement}</p></div>
+  </div><div class="modal-note"><strong>G.W².P :</strong> chaque terrain doit être étudié selon sa zone, sa superficie, son sol, son accès à l’eau, les infrastructures disponibles et les objectifs du projet avant de fixer le programme de production.</div>`;
+  modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+};
+window.closeTerrain = function(){const modal=document.getElementById('terrainModal');if(!modal)return;modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';};
+
 document.addEventListener('DOMContentLoaded', function() {
   const modal = document.getElementById('cultureModal');
   const closeBtn = modal ? modal.querySelector('.modal-close') : null;
   if (closeBtn) closeBtn.addEventListener('click', window.closeCulture);
   if (modal) modal.addEventListener('click', function(e) { if (e.target === modal) window.closeCulture(); });
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') window.closeCulture(); });
+  const terrainModal = document.getElementById('terrainModal');
+  const terrainClose = terrainModal ? terrainModal.querySelector('.terrain-close') : null;
+  if (terrainClose) terrainClose.addEventListener('click', window.closeTerrain);
+  if (terrainModal) terrainModal.addEventListener('click', function(e) { if (e.target === terrainModal) window.closeTerrain(); });
+  document.querySelectorAll('.terrain-card').forEach(function(card){card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openTerrain(card.dataset.terrain);}});});
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { window.closeCulture(); window.closeTerrain(); } });
 });
 </script>
 
