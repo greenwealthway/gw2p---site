@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe8f3"/><stop offset="1" stop-color="#eaf6e8"/></linearGradient>
+ <linearGradient id="field" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#76a957"/><stop offset="1" stop-color="#365f31"/></linearGradient>
+</defs>
+<rect width="1600" height="1000" fill="url(#sky)"/>
+<circle cx="1330" cy="150" r="75" fill="#f4c84a"/>
+<path d="M0 530 Q300 450 600 530 T1200 520 T1600 510 V1000 H0Z" fill="url(#field)"/>
+<path d="M0 700 Q400 610 800 720 T1600 680" stroke="#8ebd68" stroke-width="25" fill="none" opacity=".75"/>
+<path d="M0 820 Q400 730 800 840 T1600 800" stroke="#8ebd68" stroke-width="20" fill="none" opacity=".6"/>
+<g opacity=".95">
+ <circle cx="245" cy="570" r="38" fill="#173d29"/><path d="M245 610 L245 755 M245 655 L185 710 M245 655 L305 710 M245 755 L200 850 M245 755 L290 850" stroke="#173d29" stroke-width="30" stroke-linecap="round"/>
+ <path d="M205 620 L285 620" stroke="#d4af37" stroke-width="28"/>
+</g>
+<g transform="translate(720 210) scale(.95)"><path d="M430 760 C430 610 450 480 470 350" stroke="#4c8b3c" stroke-width="22" fill="none"/><path d="M470 420 C400 380 380 330 390 290 C450 300 485 350 475 420" fill="#5f9d42"/><path d="M470 500 C545 455 590 405 585 350 C520 360 480 405 470 500" fill="#6da849"/><path d="M465 350 C500 270 560 245 610 260 C590 330 530 365 465 350" fill="#e0ad24"/></g>
+<g opacity=".7">
+ <path d="M1050 650 C1150 620 1230 620 1330 650" stroke="#9ed7e5" stroke-width="12" fill="none"/>
+ <path d="M1050 690 C1150 660 1230 660 1330 690" stroke="#9ed7e5" stroke-width="12" fill="none"/>
+</g>
+<rect x="55" y="55" rx="24" width="610" height="155" fill="#0f3524" opacity=".93"/>
+<text x="90" y="115" font-family="Arial" font-size="32" font-weight="700" fill="#d4af37">G.W².P • GREEN WEALTH WAY</text>
+<text x="90" y="165" font-family="Arial" font-size="30" font-weight="700" fill="white">Maïs — Semis</text>
+<circle cx="1490" cy="110" r="48" fill="#d4af37"/><text x="1490" y="124" text-anchor="middle" font-family="Arial" font-size="36" font-weight="900" fill="#0f3524">2</text>
+</svg>
