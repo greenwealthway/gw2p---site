@@ -14,6 +14,13 @@
 .culture-card:hover,.culture-card:focus{transform:translateY(-5px);box-shadow:0 18px 38px rgba(0,0,0,.16);outline:none}
 .culture-more{margin-top:14px;border-top:1px solid #e7eee9;padding-top:12px;color:var(--green2);font-weight:900;font-size:13px;display:flex;justify-content:space-between;align-items:center}
 .culture-more span{font-size:20px;color:var(--gold)}
+.papaya-project{margin-top:32px;background:linear-gradient(135deg,#0d3b2e,#17634a);color:#fff;border-radius:26px;padding:30px;box-shadow:var(--shadow);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.papaya-project:hover,.papaya-project:focus{transform:translateY(-5px);box-shadow:0 20px 42px rgba(0,0,0,.22);outline:none}
+.papaya-project .tag{background:rgba(255,255,255,.14);color:#ffe89a}
+.papaya-project h3{margin:10px 0 8px;font-size:28px;color:#fff}
+.papaya-project p{margin:0;color:#dcebe4}
+.papaya-project .project-cta{display:inline-block;margin-top:18px;padding:10px 16px;border-radius:30px;background:var(--gold);color:#17231e;font-weight:900}
+
 .modal{position:fixed;inset:0;background:rgba(3,20,15,.78);display:none;align-items:center;justify-content:center;padding:18px;z-index:200}
 .modal.open{display:flex}
 .modal-card{width:min(920px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:26px;box-shadow:0 30px 80px rgba(0,0,0,.35);position:relative}
@@ -33,7 +40,7 @@
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>🌱 <strong>G.W².P</strong> — La richesse dans la nature</span><span>République du Congo • <span class="gold">Développement agricole</span></span></div></div>
-<header><div class="wrap nav"><a class="brand" href="#accueil"><img alt="Logo G.W².P" src="logo.png"/><span>G.W².P<small>GREEN WEALTH WAY PROGRAMME</small></span></a><nav><a href="#projet">Programme</a><a href="#partenariat">Partenariat</a><a href="#cultures">Cultures</a><a href="#terrains">Terrains</a><a href="#methode">Méthode</a><a href="#galerie">Galerie</a><a href="#financement">Financement</a><a href="#contact">Contact</a></nav></div></header>
+<header><div class="wrap nav"><a class="brand" href="#accueil"><img alt="Logo G.W².P" src="logo.png"/><span>G.W².P<small>GREEN WEALTH WAY PROGRAMME</small></span></a><nav><a href="#projet">Programme</a><a href="#partenariat">Partenariat</a><a href="#cultures">Cultures</a><a href="#projet-papaye">Projet Papaye</a><a href="#terrains">Terrains</a><a href="#methode">Méthode</a><a href="#galerie">Galerie</a><a href="#financement">Financement</a><a href="#contact">Contact</a></nav></div></header>
 <main>
 <section class="hero" id="accueil"><div class="wrap"><div class="hero-content"><img alt="Drapeau de la République du Congo" src="drapeau-congo.png" style="width:72px;height:auto;margin:0 0 18px;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,.2)"/><span class="eyebrow">NOUVEAU PROGRAMME AGRICOLE</span><h1>G.W².P<br/><span>Green Wealth Way</span></h1><h2>La richesse dans la nature</h2><p>Développons ensemble une agriculture créatrice de valeur en République du Congo, grâce à un partenariat gagnant-gagnant entre financeurs, propriétaires de terres et partenaires du projet.</p><div class="buttons"><a class="btn btn-primary" href="#partenariat">Découvrir le programme</a><a class="btn btn-outline" href="#cultures">Voir les cultures</a></div></div></div></section>
 <section id="projet"><div class="wrap"><div class="section-head"><div class="label">Notre vision</div><h2>Créer de la richesse à partir de la terre</h2><p>Une approche personnalisée selon la zone, les terres disponibles, les cultures adaptées et les moyens mobilisés.</p></div><div class="grid2"><div class="photo"><img alt="Terrain agricole G.W².P" src="terrain1.jpg"/></div><div class="box"><h3>Un programme pensé pour le Congo</h3><p>G.W².P accompagne la mise en valeur des terres agricoles en réunissant les acteurs nécessaires à la réalisation de projets structurés.</p><ul class="check"><li>Identification et valorisation des terres</li><li>Choix des cultures selon la zone</li><li>Organisation des moyens de production</li><li>Accompagnement jusqu'à la récolte</li><li>Agriculture durable et rentable</li></ul></div></div></div></section>
@@ -52,6 +59,16 @@
 <article aria-label="Voir la fiche de Ignames" class="card culture-card" data-culture="ignames" onclick="openCulture('ignames')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCulture('ignames')}" role="button" tabindex="0"><img alt="Ignames" src="ignames.jpg"/><div class="card-body"><span class="tag">TUBERCULE</span><h3>Ignames</h3><p>Culture vivrière à valoriser dans les zones adaptées à sa production.</p><div class="culture-more">Voir la fiche complète <span>→</span></div></div></article>
 <article aria-label="Voir la fiche de Patate douce" class="card culture-card" data-culture="patate-douce" onclick="openCulture('patate-douce')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCulture('patate-douce')}" role="button" tabindex="0"><img alt="Patate douce" src="patate-douce.jpg"/><div class="card-body"><span class="tag">TUBERCULE</span><h3>Patate douce</h3><p>Culture vivrière pouvant compléter la diversification de l'exploitation.</p><div class="culture-more">Voir la fiche complète <span>→</span></div></div></article>
 </div></div></section>
+<section id="projet-papaye">
+<div class="wrap">
+<div class="section-head"><div class="label">Projet agricole G.W².P</div><h2>Projet de culture de papayes — 5 hectares</h2><p>Un projet structuré autour du papayer Solo, adapté aux zones chaudes et aux conditions agronomiques favorables.</p></div>
+<div class="papaya-project" tabindex="0" role="button" aria-label="Ouvrir la fiche complète du projet papaye" onclick="openPapaya()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openPapaya()}">
+<span class="tag">PAPAYER SOLO • 5 HA</span>
+<h3>Découvrir le projet complet</h3>
+<p>Objectifs, implantation, calendrier de production, entretien, récolte, valorisation, organisation et partenariat financier du projet.</p>
+<span class="project-cta">Voir le projet complet →</span>
+</div>
+</div></section>
 <section class="dark-section" id="terrains"><div class="wrap"><div class="section-head"><div class="label">Terrains &amp; exploitation</div><h2>Des espaces agricoles à valoriser</h2><p>Présentation des espaces disponibles, exploités et des équipements nécessaires à leur développement.</p></div><div class="cards"><article class="card terrain-card" data-terrain="valoriser" onclick="openTerrain('valoriser')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openTerrain('valoriser')}" role="button" tabindex="0"><img alt="Terrain agricole à valoriser" src="terrain1.jpg"/><div class="card-body"><span class="tag">TERRAIN</span><h3>Terrain à valoriser</h3><p>Étude du potentiel, de la zone et des cultures adaptées.</p><strong style="color:#17634a">Voir la fiche complète →</strong></div></article><article class="card terrain-card" data-terrain="exploite" onclick="openTerrain('exploite')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openTerrain('exploite')}" role="button" tabindex="0"><img alt="Terrain agricole exploité" src="terrain2.jpg"/><div class="card-body"><span class="tag">EXPLOITATION</span><h3>Terrain exploité</h3><p>Organisation des activités agricoles et suivi de la production.</p><strong style="color:#17634a">Voir la fiche complète →</strong></div></article><article class="card terrain-card" data-terrain="irrigation" onclick="openTerrain('irrigation')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openTerrain('irrigation')}" role="button" tabindex="0"><img alt="Gestion de l'eau et irrigation agricole" src="irrigation.jpg"/><div class="card-body"><span class="tag">IRRIGATION</span><h3>Gestion de l'eau</h3><p>Solutions d'irrigation adaptées aux besoins de la production.</p><strong style="color:#17634a">Voir la fiche complète →</strong></div></article></div></div></section>
 <section id="methode"><div class="wrap"><div class="section-head"><div class="label">Méthode G.W².P</div><h2>Du terrain à la récolte</h2><p>Une démarche structurée pour transformer un potentiel agricole en projet concret.</p></div><div class="steps"><div class="step"><div class="num">1</div><h3>Étudier</h3><p>Identifier la zone, le terrain, les ressources et les possibilités agricoles.</p></div><div class="step"><div class="num">2</div><h3>Planifier</h3><p>Choisir les cultures et organiser les besoins, le calendrier et les équipes.</p></div><div class="step"><div class="num">3</div><h3>Produire</h3><p>Mettre en œuvre les opérations agricoles avec un suivi régulier.</p></div><div class="step"><div class="num">4</div><h3>Récolter &amp; valoriser</h3><p>Organiser la récolte et la valorisation de la production.</p></div></div></div></section>
 <section id="financement" style="background:#fff"><div class="wrap"><div class="section-head"><div class="label">Financement</div><h2>Des projets adaptés aux moyens disponibles</h2><p>Le choix des cultures et l'ampleur du projet sont adaptés aux moyens financiers mobilisables.</p></div><div class="grid2"><div class="photo"><img alt="Récolte agricole" src="recolte.jpg"/></div><div class="box"><h3>Financement à moindre coût</h3><p>Chaque projet peut être étudié à partir de ses besoins réels : préparation du terrain, semences, matériel, irrigation, entretien, main-d'œuvre et récolte.</p><ul class="check"><li>État des besoins du projet</li><li>Budget adapté à la surface</li><li>Organisation progressive des investissements</li><li>Suivi des activités et des résultats</li></ul></div></div></div></section>
@@ -63,6 +80,11 @@
 <div class="modal-body" id="cultureModalBody"></div>
 </div>
 </div>
+<div aria-hidden="true" class="modal" id="papayaModal">
+<div aria-labelledby="papayaModalTitle" aria-modal="true" class="modal-card" role="dialog">
+<div class="modal-head"><button aria-label="Fermer" class="modal-close papaya-close" type="button">×</button><h2 id="papayaModalTitle">Projet de culture de papayes</h2><p id="papayaModalCategory">PROJET AGRICOLE — 5 HECTARES</p></div>
+<div class="modal-body" id="papayaModalBody"></div>
+</div></div>
 <div aria-hidden="true" class="modal" id="terrainModal">
 <div aria-labelledby="terrainModalTitle" aria-modal="true" class="modal-card" role="dialog">
 <div class="modal-head"><button aria-label="Fermer" class="modal-close terrain-close" type="button">×</button><h2 id="terrainModalTitle">Fiche terrain</h2><p id="terrainModalCategory"></p></div>
@@ -121,6 +143,40 @@ window.closeCulture = function() {
   document.body.style.overflow='';
 };
 
+const papayaData = {
+  surface:'5 hectares',
+  variety:'Papayer Solo',
+  zone:'Zones chaudes et parcelles bénéficiant de bonnes conditions de drainage, d’ensoleillement et d’un accès à l’eau.',
+  objectif:'Mettre en place une exploitation organisée de papayes destinée à produire régulièrement et à valoriser les fruits sur les marchés adaptés.',
+  implantation:'Préparer et délimiter la parcelle, améliorer le sol si nécessaire, sélectionner des plants sains et organiser les espacements selon les recommandations techniques retenues pour la parcelle.',
+  calendrier:'La mise à fruit est indicative autour de 8 à 9 mois dans des conditions favorables. La production peut ensuite être échelonnée et suivie selon l’état des plants et les conditions de culture.',
+  entretien:'Désherbage, fertilisation raisonnée, gestion de l’eau, surveillance des ravageurs et maladies, remplacement des plants défaillants et suivi régulier de la parcelle.',
+  eau:'Prévoir une source d’eau et un système d’irrigation adapté pour sécuriser l’installation et les périodes sèches, sans créer de stagnation.',
+  production:'Le dossier de projet prévoit un ordre de grandeur indicatif de 40 à 70 tonnes par hectare, à considérer comme une hypothèse de projet à confirmer selon la variété, la densité, le sol, le climat et la conduite culturale.',
+  valorisation:'Vente de fruits frais, organisation des récoltes, tri et conditionnement, avec possibilité d’étudier des débouchés commerciaux et de transformation selon le marché.',
+  partenariat:'Le projet peut être intégré au modèle G.W².P associant financeurs, propriétaires de terres et partenaires autour d’un projet agricole structuré.',
+  financement:'Le budget doit être établi à partir de l’état réel des besoins : préparation des 5 ha, plants, intrants, irrigation, main-d’œuvre, entretien, récolte, conditionnement et autres équipements nécessaires.'
+};
+window.openPapaya = function(){
+ const modal=document.getElementById('papayaModal'); if(!modal)return;
+ document.getElementById('papayaModalBody').innerHTML=`<div class="modal-grid">
+ <div class="box"><h3>📐 Surface</h3><p>${papayaData.surface}</p></div>
+ <div class="box"><h3>🌱 Variété</h3><p>${papayaData.variety}</p></div>
+ <div class="box"><h3>📍 Zone adaptée</h3><p>${papayaData.zone}</p></div>
+ <div class="box"><h3>🎯 Objectif</h3><p>${papayaData.objectif}</p></div>
+ <div class="box"><h3>🛠️ Implantation</h3><p>${papayaData.implantation}</p></div>
+ <div class="box"><h3>📅 Calendrier</h3><p>${papayaData.calendrier}</p></div>
+ <div class="box"><h3>🧑‍🌾 Entretien</h3><p>${papayaData.entretien}</p></div>
+ <div class="box"><h3>💧 Eau & irrigation</h3><p>${papayaData.eau}</p></div>
+ <div class="box"><h3>📊 Production indicative</h3><p>${papayaData.production}</p></div>
+ <div class="box"><h3>📦 Valorisation</h3><p>${papayaData.valorisation}</p></div>
+ <div class="box"><h3>🤝 Partenariat</h3><p>${papayaData.partenariat}</p></div>
+ <div class="box"><h3>💰 Financement</h3><p>${papayaData.financement}</p></div>
+ </div><div class="modal-note"><strong>G.W².P :</strong> les chiffres de production et le calendrier sont des hypothèses indicatives du projet. Le dimensionnement final doit être adapté à la parcelle, au matériel végétal, au sol, à l’eau disponible, au climat et au plan technique retenu.</div>`;
+ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+};
+window.closePapaya=function(){const modal=document.getElementById('papayaModal');if(!modal)return;modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';};
+
 const terrainData = {
   valoriser: {cat:'TERRAIN À VALORISER', title:'Terrain à valoriser', potentiel:'Parcelle destinée à être étudiée avant la mise en production : accès, superficie, eau, relief, sol et possibilités d’exploitation.', preparation:'Défrichage raisonné, nettoyage, délimitation de la parcelle, préparation du sol et organisation des accès selon le projet.', cultures:'Le choix des cultures se fait selon la zone, le sol, la saison, l’eau disponible et les objectifs économiques du projet. Les cultures G.W².P peuvent être sélectionnées après étude.', eau:'Identifier la source d’eau et prévoir une solution d’irrigation adaptée lorsque nécessaire.', exploitation:'Mise en production progressive, avec calendrier des travaux, suivi des intrants, main-d’œuvre et opérations culturales.', financement:'Possibilité d’étudier un projet avec propriétaire de terrain, financeur et partenaires dans une logique de partenariat gagnant-gagnant.'},
   exploite: {cat:'TERRAIN EXPLOITÉ', title:'Terrain exploité', potentiel:'Espace agricole déjà engagé dans une activité de production et pouvant être amélioré ou diversifié.', preparation:'Évaluer l’existant : cultures, état des parcelles, accès, équipements, main-d’œuvre et organisation des travaux.', cultures:'Optimisation des cultures existantes ou diversification selon le potentiel de la parcelle et la demande du marché.', eau:'Suivi des besoins hydriques et amélioration progressive du système d’irrigation si nécessaire.', exploitation:'Planification des semis, entretien, suivi phytosanitaire, récolte et valorisation des productions.', financement:'Les besoins peuvent être étudiés par étape : amélioration du terrain, équipements, intrants, irrigation et développement de la production.'},
@@ -160,5 +216,14 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.terrain-card').forEach(function(card){card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();openTerrain(card.dataset.terrain);}});});
   document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { window.closeCulture(); window.closeTerrain(); } });
 });
+</script>
+
+<script>
+document.addEventListener('click',function(e){
+ if(e.target.closest('.papaya-close')) closePapaya();
+ const pm=document.getElementById('papayaModal');
+ if(e.target===pm) closePapaya();
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closePapaya();}});
 </script>
 </body></html>
