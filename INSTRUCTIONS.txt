@@ -1,7 +1,29 @@
-REMPLACEMENT DE L'IMAGE D'ACCUEIL G.W².P
+REMPLACEMENT DU SITE G.W².P
 
-1. Dans GitHub, ouvre le dépôt du site.
-2. Remplace l'ancien fichier 'accueil-gw2p.png' par celui-ci.
-3. Le fichier doit rester au même niveau que index.html.
-4. Ne change pas son nom : accueil-gw2p.png
-5. Attends quelques instants puis actualise le site.
+Ce index.html conserve le design vert/doré fourni par l'utilisateur et corrige :
+- la structure HTML/CSS cassée ;
+- le double <style> mal placé ;
+- la fiche Légumes interrompue ;
+- les liens des cartes vers les fiches ;
+- la navigation vers Terrains, Partenariat et Contact.
+
+IMPORTANT :
+Les images doivent être dans le dossier images/ à la racine du dépôt GitHub.
+Le logo doit être images/logo.png.
+Les illustrations des étapes doivent être les fichiers .svg déjà téléversés.
+Ne change pas les noms des fichiers.
+
+Structure :
+index.html
+images/
+  logo.png
+  hero.jpg
+  recolte.jpg
+  mais.jpg
+  manioc.jpg
+  legumes.jpg
+  ananas.jpg
+  terrain1.jpg
+  terrain2.jpg
+  irrigation.jpg
+  [32 fichiers .svg des étapes]
