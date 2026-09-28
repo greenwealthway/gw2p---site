@@ -1,470 +1,211 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="G.W².P GREEN WEALTH WAY PROGRAMME - Programme de développement agricole en République du Congo.">
-  <meta name="theme-color" content="#0f3524">
-  <title>G.W².P - GREEN WEALTH WAY PROGRAMME</title>
-
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:Arial,Helvetica,sans-serif;
-      background:#f8f5ec;
-      color:#183326;
-      line-height:1.6;
-    }
-    a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .container{width:min(1180px,92%);margin:auto}
-
-    header{
-      position:sticky;top:0;z-index:1000;
-      background:#0f3524;
-      box-shadow:0 3px 15px rgba(0,0,0,.18);
-    }
-    .nav{
-      min-height:78px;display:flex;align-items:center;
-      justify-content:space-between;gap:20px;
-    }
-    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
-    .brand img{width:58px;height:58px;object-fit:contain}
-    .brand span{font-size:15px;letter-spacing:.4px}
-    .menu{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
-    .menu a{
-      color:#fff;padding:10px 12px;border-radius:8px;font-size:14px;
-      transition:.25s;
-    }
-    .menu a:hover{background:#d4af37;color:#0f3524}
-
-    .hero{
-      min-height:650px;
-      display:flex;align-items:center;
-      background:
-        linear-gradient(rgba(6,34,21,.72),rgba(6,34,21,.62)),
-        url("images/hero.jpg") center/cover no-repeat;
-      color:#fff;
-    }
-    .hero-content{padding:85px 0;max-width:820px}
-    .eyebrow{
-      display:inline-block;background:#d4af37;color:#123221;
-      padding:8px 15px;border-radius:30px;font-weight:800;
-      font-size:13px;margin-bottom:20px;
-    }
-    h1{font-size:clamp(38px,6vw,72px);line-height:1.04;margin-bottom:20px}
-    .hero p{font-size:clamp(17px,2vw,21px);max-width:750px}
-    .buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-    .btn{
-      display:inline-block;padding:13px 20px;border-radius:9px;
-      font-weight:800;border:2px solid #d4af37;
-    }
-    .btn.primary{background:#d4af37;color:#0f3524}
-    .btn.secondary{color:#fff;background:transparent}
-
-    section{padding:78px 0}
-    .section-title{text-align:center;margin-bottom:42px}
-    .section-title span{color:#b28c20;font-weight:800;text-transform:uppercase;font-size:13px}
-    .section-title h2{font-size:clamp(29px,4vw,44px);color:#0f3524;margin:7px 0}
-    .section-title p{max-width:760px;margin:auto;color:#5b685f}
-
-    .about-grid,.partnership-grid{
-      display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center
-    }
-    .about-image img,.partnership-image img{
-      width:100%;height:420px;object-fit:cover;border-radius:18px;
-      box-shadow:0 12px 35px rgba(0,0,0,.13)
-    }
-    .text-box h3{font-size:30px;color:#0f3524;margin-bottom:15px}
-    .text-box p{margin-bottom:14px;color:#536157}
-    .check-list{list-style:none;margin-top:20px}
-    .check-list li{margin:12px 0;padding-left:28px;position:relative}
-    .check-list li:before{
-      content:"✓";position:absolute;left:0;color:#b28c20;font-weight:900
-    }
-
-    .cards{
-      display:grid;grid-template-columns:repeat(4,1fr);gap:20px
-    }
-    .card{
-      background:#fff;border-radius:16px;overflow:hidden;
-      box-shadow:0 7px 24px rgba(15,53,36,.10);
-      transition:transform .25s,box-shadow .25s;
-    }
-    .card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(15,53,36,.16)}
-    .card img{height:190px;width:100%;object-fit:cover}
-    .card-body{padding:20px}
-    .card-body h3{color:#0f3524;font-size:21px;margin-bottom:8px}
-    .card-body p{font-size:14px;color:#627067;margin-bottom:15px}
-    .link{color:#9a7718;font-weight:800;font-size:14px}
-
-    .terrain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
-    .terrain{
-      position:relative;border-radius:17px;overflow:hidden;min-height:320px;
-      background:#ddd;
-    }
-    .terrain img{width:100%;height:320px;object-fit:cover}
-    .terrain-info{
-      position:absolute;left:0;right:0;bottom:0;padding:25px;color:#fff;
-      background:linear-gradient(transparent,rgba(0,0,0,.82));
-    }
-    .terrain-info h3{font-size:24px}
-
-    .process{
-      display:grid;grid-template-columns:repeat(4,1fr);gap:18px
-    }
-    .step{
-      background:#fff;border-top:4px solid #d4af37;padding:25px;border-radius:12px;
-      box-shadow:0 6px 20px rgba(0,0,0,.07)
-    }
-    .number{
-      width:42px;height:42px;border-radius:50%;background:#0f3524;color:#fff;
-      display:grid;place-items:center;font-weight:900;margin-bottom:15px
-    }
-    .step h3{margin-bottom:7px;color:#0f3524}
-
-    .cta{
-      background:#0f3524;color:#fff;text-align:center;
-    }
-    .cta h2{font-size:clamp(28px,4vw,44px);margin-bottom:12px}
-    .cta p{max-width:750px;margin:0 auto 25px;color:#dfe9e2}
-
-    .contact-box{
-      display:grid;grid-template-columns:repeat(3,1fr);gap:20px
-    }
-    .contact-item{
-      background:#fff;padding:28px;border-radius:15px;text-align:center;
-      box-shadow:0 6px 20px rgba(0,0,0,.07)
-    }
-    .contact-item strong{display:block;color:#0f3524;margin-bottom:7px}
-    .contact-item span{color:#647067}
-
-    footer{background:#082518;color:#dbe7de;padding:35px 0;text-align:center}
-    footer img{width:70px;height:70px;object-fit:contain;margin:0 auto 12px}
-    footer p{font-size:13px;color:#b8c9bc}
-
-    .culture-detail{scroll-margin-top:100px}
-    @media(max-width:950px){
-      .cards{grid-template-columns:repeat(2,1fr)}
-      .process{grid-template-columns:repeat(2,1fr)}
-      .about-grid,.partnership-grid{grid-template-columns:1fr}
-      .about-image img,.partnership-image img{height:330px}
-    }
-    @media(max-width:650px){
-      .nav{padding:10px 0;align-items:flex-start}
-      .brand span{font-size:12px}
-      .brand img{width:48px;height:48px}
-      .menu{justify-content:flex-start}
-      .menu a{font-size:12px;padding:7px 8px}
-      .hero{min-height:580px}
-      .hero-content{padding:60px 0}
-      section{padding:58px 0}
-      .cards,.terrain-grid,.process,.contact-box{grid-template-columns:1fr}
-      .card img{height:220px}
-    }
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="G.W².P GREEN WEALTH WAY PROGRAMME - Programme de développement agricole en République du Congo.">
+<meta name="theme-color" content="#0f3524">
+<title>G.W².P - GREEN WEALTH WAY PROGRAMME</title>
 <style>
-.culture-section{padding:75px 0;background:#f0eee4;border-top:1px solid #ded9c8}.culture-head{display:grid;grid-template-columns:300px 1fr;gap:28px;align-items:center;margin-bottom:38px}.culture-head img{width:100%;height:230px;object-fit:cover;border-radius:16px}.culture-head h3{font-size:34px;color:#0f3524;margin-bottom:8px}.culture-head p{color:#59665e}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.step-card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 6px 20px #00000010}.step-card img{width:100%;height:175px;object-fit:cover}.step-body{padding:17px}.step-number{display:inline-block;background:#0f3524;color:white;border-radius:20px;padding:4px 10px;font-size:11px;font-weight:800;margin-bottom:8px}.step-body h4{font-size:18px;color:#0f3524;margin-bottom:6px}.step-body p{font-size:13px;color:#637067}@media(max-width:950px){.steps{grid-template-columns:repeat(2,1fr)}.culture-head{grid-template-columns:1fr}}@media(max-width:650px){.steps{grid-template-columns:1fr}.culture-head img{height:230px}}
-</style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f8f5ec;color:#183326;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+header{position:sticky;top:0;z-index:1000;background:#0f3524;box-shadow:0 3px 15px rgba(0,0,0,.18)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800}
+.brand img{width:58px;height:58px;object-fit:contain}
+.brand span{font-size:15px;letter-spacing:.4px}
+.menu{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+.menu a{color:#fff;padding:10px 12px;border-radius:8px;font-size:14px;transition:.25s}
+.menu a:hover{background:#d4af37;color:#0f3524}
+.hero{min-height:650px;display:flex;align-items:center;background:linear-gradient(rgba(6,34,21,.72),rgba(6,34,21,.62)),url("images/hero.jpg") center/cover no-repeat;color:#fff}
+.hero-content{padding:85px 0;max-width:820px}
+.eyebrow{display:inline-block;background:#d4af37;color:#123221;padding:8px 15px;border-radius:30px;font-weight:800;font-size:13px;margin-bottom:20px}
+h1{font-size:clamp(38px,6vw,72px);line-height:1.04;margin-bottom:20px}
+.hero p{font-size:clamp(17px,2vw,21px);max-width:750px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-block;padding:13px 20px;border-radius:9px;font-weight:800;border:2px solid #d4af37}
+.btn.primary{background:#d4af37;color:#0f3524}
+.btn.secondary{color:#fff;background:transparent}
+section{padding:78px 0}
+.section-title{text-align:center;margin-bottom:42px}
+.section-title span{color:#b28c20;font-weight:800;text-transform:uppercase;font-size:13px}
+.section-title h2{font-size:clamp(29px,4vw,44px);color:#0f3524;margin:7px 0}
+.section-title p{max-width:760px;margin:auto;color:#5b685f}
+.about-grid,.partnership-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.about-image img,.partnership-image img{width:100%;height:420px;object-fit:cover;border-radius:18px;box-shadow:0 12px 35px rgba(0,0,0,.13)}
+.text-box h3{font-size:30px;color:#0f3524;margin-bottom:15px}
+.text-box p{margin-bottom:14px;color:#536157}
+.check-list{list-style:none;margin-top:20px}
+.check-list li{margin:12px 0;padding-left:28px;position:relative}
+.check-list li:before{content:"✓";position:absolute;left:0;color:#b28c20;font-weight:900}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 7px 24px rgba(15,53,36,.10);transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(15,53,36,.16)}
+.card img{height:190px;width:100%;object-fit:cover}
+.card-body{padding:20px}
+.card-body h3{color:#0f3524;font-size:21px;margin-bottom:8px}
+.card-body p{font-size:14px;color:#627067;margin-bottom:15px}
+.link{color:#9a7718;font-weight:800;font-size:14px}
+.terrain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.terrain{position:relative;border-radius:17px;overflow:hidden;min-height:320px;background:#ddd}
+.terrain img{width:100%;height:320px;object-fit:cover}
+.terrain-info{position:absolute;left:0;right:0;bottom:0;padding:25px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.82))}
+.terrain-info h3{font-size:24px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:#fff;border-top:4px solid #d4af37;padding:25px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.07)}
+.number{width:42px;height:42px;border-radius:50%;background:#0f3524;color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:15px}
+.step h3{margin-bottom:7px;color:#0f3524}
+.cta{background:#0f3524;color:#fff;text-align:center}
+.cta h2{font-size:clamp(28px,4vw,44px);margin-bottom:12px}
+.cta p{max-width:750px;margin:0 auto 25px;color:#dfe9e2}
+.contact-box{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.contact-item{background:#fff;padding:28px;border-radius:15px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,.07)}
+.contact-item strong{display:block;color:#0f3524;margin-bottom:7px}
+.contact-item span{color:#647067}
+footer{background:#082518;color:#dbe7de;padding:35px 0;text-align:center}
+footer img{width:70px;height:70px;object-fit:contain;margin:0 auto 12px}
+footer p{font-size:13px;color:#b8c9bc}
+.culture-detail{scroll-margin-top:100px}
+.culture-section{padding:75px 0;background:#f0eee4;border-top:1px solid #ded9c8}
+.culture-head{display:grid;grid-template-columns:300px 1fr;gap:28px;align-items:center;margin-bottom:38px}
+.culture-head img{width:100%;height:230px;object-fit:cover;border-radius:16px}
+.culture-head h3{font-size:34px;color:#0f3524;margin-bottom:8px}
+.culture-head p{color:#59665e}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step-card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 6px 20px #00000010}
+.step-card img{width:100%;height:175px;object-fit:cover}
+.step-body{padding:17px}
+.step-number{display:inline-block;background:#0f3524;color:white;border-radius:20px;padding:4px 10px;font-size:11px;font-weight:800;margin-bottom:8px}
+.step-body h4{font-size:18px;color:#0f3524;margin-bottom:6px}
+.step-body p{font-size:13px;color:#637067}
+@media(max-width:950px){.cards{grid-template-columns:repeat(2,1fr)}.process{grid-template-columns:repeat(2,1fr)}.about-grid,.partnership-grid{grid-template-columns:1fr}.about-image img,.partnership-image img{height:330px}.steps{grid-template-columns:repeat(2,1fr)}.culture-head{grid-template-columns:1fr}}
+@media(max-width:650px){.nav{padding:10px 0;align-items:flex-start}.brand span{font-size:12px}.brand img{width:48px;height:48px}.menu{justify-content:flex-start}.menu a{font-size:12px;padding:7px 8px}.hero{min-height:580px}.hero-content{padding:60px 0}section{padding:58px 0}.cards,.terrain-grid,.process,.contact-box,.steps{grid-template-columns:1fr}.card img{height:220px}.culture-head img{height:230px}}
 </style>
 </head>
-
-<body>
+<body id="accueil">
 
 <header>
-  <div class="container nav">
-    <a class="brand" href="#accueil">
-      <img src="images/logo.png" alt="Logo G.W².P">
-      <span>G.W².P GREEN WEALTH WAY PROGRAMME</span>
-    </a>
-    <nav class="menu" aria-label="Navigation principale">
-      <a href="#accueil">Accueil</a>
-      <a href="#programme">Programme</a>
-      <a href="#cultures">Cultures</a>
-      <a href="#terrains">Terrains</a>
-      <a href="#partenariat">Partenariat</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<div class="container nav">
+<a class="brand" href="#accueil"><img src="images/logo.png" alt="Logo G.W².P"><span>G.W².P GREEN WEALTH WAY PROGRAMME</span></a>
+<nav class="menu" aria-label="Navigation principale">
+<a href="#accueil">Accueil</a><a href="#programme">Programme</a><a href="#cultures">Cultures</a><a href="#terrains">Terrains</a><a href="#partenariat">Partenariat</a><a href="#contact">Contact</a>
+</nav>
+</div>
 </header>
 
 <main>
-
-<section id="accueil" class="hero">
-  <div class="container hero-content">
-    <span class="eyebrow">RÉPUBLIQUE DU CONGO • DÉVELOPPEMENT AGRICOLE</span>
-    <h1>GREEN WEALTH WAY PROGRAMME</h1>
-    <p>
-      Développons ensemble une agriculture créatrice de valeur, durable et rentable,
-      grâce à un partenariat gagnant-gagnant entre financeurs, propriétaires de terres
-      et partenaires du projet.
-    </p>
-    <div class="buttons">
-      <a class="btn primary" href="#cultures">Découvrir les cultures</a>
-      <a class="btn secondary" href="#contact">Nous contacter</a>
-    </div>
-  </div>
+<section class="hero">
+<div class="container hero-content">
+<span class="eyebrow">RÉPUBLIQUE DU CONGO • DÉVELOPPEMENT AGRICOLE</span>
+<h1>GREEN WEALTH WAY PROGRAMME</h1>
+<p>Développons ensemble une agriculture créatrice de valeur, durable et rentable, grâce à un partenariat gagnant-gagnant entre financeurs, propriétaires de terres et partenaires du projet.</p>
+<div class="buttons"><a class="btn primary" href="#cultures">Découvrir les cultures</a><a class="btn secondary" href="#contact">Nous contacter</a></div>
+</div>
 </section>
 
-<section id="programme">
-  <div class="container">
-    <div class="section-title">
-      <span>Notre vision</span>
-      <h2>Un nouveau programme agricole</h2>
-      <p>
-        G.W².P met en relation les ressources financières, les terres disponibles
-        et les compétences nécessaires pour développer des exploitations agricoles
-        adaptées aux réalités de chaque zone.
-      </p>
-    </div>
+<section id="programme"><div class="container">
+<div class="section-title"><span>Notre vision</span><h2>Un nouveau programme agricole</h2><p>G.W².P met en relation les ressources financières, les terres disponibles et les compétences nécessaires pour développer des exploitations adaptées aux réalités de chaque zone.</p></div>
+<div class="about-grid">
+<div class="about-image"><img src="images/recolte.jpg" alt="Récolte agricole"></div>
+<div class="text-box"><h3>Créer de la richesse à partir de la terre</h3><p>Le programme propose de développer différentes cultures selon la zone, la nature du terrain, les conditions de production et les moyens financiers disponibles.</p><p>L’objectif est de favoriser des projets agricoles structurés, avec une organisation claire entre les différents partenaires.</p><ul class="check-list"><li>Valorisation des terres disponibles</li><li>Choix des cultures selon chaque zone</li><li>Organisation et accompagnement du projet</li><li>Développement d’une agriculture durable et rentable</li></ul></div>
+</div></div></section>
 
-    <div class="about-grid">
-      <div class="about-image">
-        <img src="images/recolte.jpg" alt="Récolte agricole">
-      </div>
-      <div class="text-box">
-        <h3>Créer de la richesse à partir de la terre</h3>
-        <p>
-          Le programme propose de développer différentes cultures selon la zone,
-          la nature du terrain, les conditions de production et les moyens financiers
-          disponibles.
-        </p>
-        <p>
-          L'objectif est de favoriser des projets agricoles structurés, avec une
-          organisation claire entre les différents partenaires.
-        </p>
-        <ul class="check-list">
-          <li>Valorisation des terres disponibles</li>
-          <li>Choix des cultures selon chaque zone</li>
-          <li>Organisation et accompagnement du projet</li>
-          <li>Développement d'une agriculture durable et rentable</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+<section id="cultures"><div class="container">
+<div class="section-title"><span>Nos productions</span><h2>Les cultures du programme</h2><p>Chaque culture dispose d’une fiche personnalisée et d’un parcours de production.</p></div>
+<div class="cards">
+<article class="card"><img src="images/mais.jpg" alt="Culture de maïs"><div class="card-body"><h3>Maïs</h3><p>Culture destinée à la production alimentaire et à la valorisation agricole des terres.</p><a class="link" href="#culture-mais">Voir la fiche →</a></div></article>
+<article class="card"><img src="images/manioc.jpg" alt="Culture de manioc"><div class="card-body"><h3>Manioc</h3><p>Culture importante pour l’alimentation et la transformation des produits agricoles.</p><a class="link" href="#culture-manioc">Voir la fiche →</a></div></article>
+<article class="card"><img src="images/legumes.jpg" alt="Culture de légumes"><div class="card-body"><h3>Légumes</h3><p>Production maraîchère adaptée aux besoins du marché et aux possibilités d’irrigation.</p><a class="link" href="#culture-legumes">Voir la fiche →</a></div></article>
+<article class="card"><img src="images/ananas.jpg" alt="Culture d’ananas"><div class="card-body"><h3>Ananas</h3><p>Culture fruitière pouvant être développée dans des zones adaptées.</p><a class="link" href="#culture-ananas">Voir la fiche →</a></div></article>
+</div></div></section>
 
-<section id="cultures">
-  <div class="container">
-    <div class="section-title">
-      <span>Nos productions</span>
-      <h2>Les cultures du programme</h2>
-      <p>Chaque culture dispose d'une fiche personnalisée pour présenter ses caractéristiques et son intérêt agricole.</p>
-    </div>
 
-    <div class="cards">
+<section id="culture-mais" class="culture-section">
+<div class="container">
+<div class="culture-head"><img src="images/mais.jpg" alt="Culture du maïs"><div><span class="eyebrow">FICHE CULTURE • 01</span><h3>Culture du maïs</h3><p>De la préparation de la parcelle à la récolte et à la valorisation de la production.</p></div></div>
+<div class="steps">
+<div class="step-card"><img src="images/mais-preparation.svg" alt="Préparation du terrain pour le maïs"><div class="step-body"><span class="step-number">ÉTAPE 01</span><h4>Préparation du terrain</h4><p>Nettoyage, travail du sol et préparation d’une parcelle adaptée.</p></div></div>
+<div class="step-card"><img src="images/mais-semis.svg" alt="Semis du maïs"><div class="step-body"><span class="step-number">ÉTAPE 02</span><h4>Semis</h4><p>Choix des semences, implantation régulière et respect des espacements.</p></div></div>
+<div class="step-card"><img src="images/mais-entretien.svg" alt="Entretien du maïs"><div class="step-body"><span class="step-number">ÉTAPE 03</span><h4>Entretien</h4><p>Désherbage, fertilisation, observation des plants et gestion de l’eau.</p></div></div>
+<div class="step-card"><img src="images/mais-protection.svg" alt="Protection du maïs"><div class="step-body"><span class="step-number">ÉTAPE 04</span><h4>Protection</h4><p>Surveillance régulière et interventions adaptées.</p></div></div>
+<div class="step-card"><img src="images/mais-croissance.svg" alt="Croissance du maïs"><div class="step-body"><span class="step-number">ÉTAPE 05</span><h4>Croissance</h4><p>Suivi du développement des plants et des conditions de production.</p></div></div>
+<div class="step-card"><img src="images/mais-recolte.svg" alt="Récolte du maïs"><div class="step-body"><span class="step-number">ÉTAPE 06</span><h4>Récolte</h4><p>Récolte au stade approprié, tri et première préparation.</p></div></div>
+<div class="step-card"><img src="images/mais-stockage.svg" alt="Stockage du maïs"><div class="step-body"><span class="step-number">ÉTAPE 07</span><h4>Stockage</h4><p>Séchage, conditionnement et conservation.</p></div></div>
+<div class="step-card"><img src="images/mais-commercialisation.svg" alt="Commercialisation du maïs"><div class="step-body"><span class="step-number">ÉTAPE 08</span><h4>Commercialisation</h4><p>Organisation de la vente et recherche de débouchés.</p></div></div>
+</div></div></section>
 
-      <article class="card culture-detail" id="mais">
-        <img src="images/mais.jpg" alt="Culture de maïs">
-        <div class="card-body">
-          <h3>Maïs</h3>
-          <p>Culture destinée à la production alimentaire et à la valorisation agricole des terres.</p>
-          <a class="link" href="#fiche-mais">Voir la fiche →</a>
-        </div>
-      </article>
+<section id="culture-manioc" class="culture-section">
+<div class="container">
+<div class="culture-head"><img src="images/manioc.jpg" alt="Culture du manioc"><div><span class="eyebrow">FICHE CULTURE • 02</span><h3>Culture du manioc</h3><p>Une fiche structurée autour de l’implantation, de l’entretien, de la maturation et de la récolte.</p></div></div>
+<div class="steps">
+<div class="step-card"><img src="images/manioc-preparation.svg" alt="Préparation du manioc"><div class="step-body"><span class="step-number">ÉTAPE 01</span><h4>Préparation du terrain</h4><p>Nettoyage et préparation du sol.</p></div></div>
+<div class="step-card"><img src="images/manioc-plantation.svg" alt="Plantation du manioc"><div class="step-body"><span class="step-number">ÉTAPE 02</span><h4>Plantation</h4><p>Sélection des boutures et mise en terre.</p></div></div>
+<div class="step-card"><img src="images/manioc-entretien.svg" alt="Entretien du manioc"><div class="step-body"><span class="step-number">ÉTAPE 03</span><h4>Entretien</h4><p>Désherbage et suivi de la parcelle.</p></div></div>
+<div class="step-card"><img src="images/manioc-protection.svg" alt="Protection du manioc"><div class="step-body"><span class="step-number">ÉTAPE 04</span><h4>Protection</h4><p>Surveillance et mesures adaptées.</p></div></div>
+<div class="step-card"><img src="images/manioc-croissance.svg" alt="Croissance du manioc"><div class="step-body"><span class="step-number">ÉTAPE 05</span><h4>Croissance</h4><p>Suivi du développement des plants.</p></div></div>
+<div class="step-card"><img src="images/manioc-recolte.svg" alt="Récolte du manioc"><div class="step-body"><span class="step-number">ÉTAPE 06</span><h4>Récolte</h4><p>Arrachage, tri et préparation des racines.</p></div></div>
+<div class="step-card"><img src="images/manioc-transformation.svg" alt="Transformation du manioc"><div class="step-body"><span class="step-number">ÉTAPE 07</span><h4>Transformation</h4><p>Transformation selon les débouchés.</p></div></div>
+<div class="step-card"><img src="images/manioc-commercialisation.svg" alt="Commercialisation du manioc"><div class="step-body"><span class="step-number">ÉTAPE 08</span><h4>Commercialisation</h4><p>Conditionnement et recherche de marchés.</p></div></div>
+</div></div></section>
 
-      <article class="card culture-detail" id="manioc">
-        <img src="images/manioc.jpg" alt="Culture de manioc">
-        <div class="card-body">
-          <h3>Manioc</h3>
-          <p>Culture importante pour l'alimentation et la transformation des produits agricoles.</p>
-          <a class="link" href="#fiche-manioc">Voir la fiche →</a>
-        </div>
-      </article>
+<section id="culture-legumes" class="culture-section">
+<div class="container">
+<div class="culture-head"><img src="images/legumes.jpg" alt="Culture des légumes"><div><span class="eyebrow">FICHE CULTURE • 03</span><h3>Culture des légumes</h3><p>Une chaîne de production maraîchère organisée autour de l’eau, du suivi des plants et de la récolte.</p></div></div>
+<div class="steps">
+<div class="step-card"><img src="images/legumes-preparation.svg" alt="Préparation maraîchère"><div class="step-body"><span class="step-number">ÉTAPE 01</span><h4>Préparation</h4><p>Préparation des planches et amélioration du sol.</p></div></div>
+<div class="step-card"><img src="images/legumes-semis.svg" alt="Semis des légumes"><div class="step-body"><span class="step-number">ÉTAPE 02</span><h4>Semis / pépinière</h4><p>Semis des espèces choisies et préparation des jeunes plants.</p></div></div>
+<div class="step-card"><img src="images/legumes-plantation.svg" alt="Plantation des légumes"><div class="step-body"><span class="step-number">ÉTAPE 03</span><h4>Plantation</h4><p>Installation des plants avec des espacements adaptés.</p></div></div>
+<div class="step-card"><img src="images/legumes-irrigation.svg" alt="Irrigation des légumes"><div class="step-body"><span class="step-number">ÉTAPE 04</span><h4>Irrigation</h4><p>Gestion régulière de l’eau et système adapté.</p></div></div>
+<div class="step-card"><img src="images/legumes-entretien.svg" alt="Entretien des légumes"><div class="step-body"><span class="step-number">ÉTAPE 05</span><h4>Entretien</h4><p>Désherbage et suivi de la croissance.</p></div></div>
+<div class="step-card"><img src="images/legumes-protection.svg" alt="Protection des légumes"><div class="step-body"><span class="step-number">ÉTAPE 06</span><h4>Protection</h4><p>Prévention et surveillance des attaques.</p></div></div>
+<div class="step-card"><img src="images/legumes-recolte.svg" alt="Récolte des légumes"><div class="step-body"><span class="step-number">ÉTAPE 07</span><h4>Récolte</h4><p>Récolte progressive selon la maturité.</p></div></div>
+<div class="step-card"><img src="images/legumes-commercialisation.svg" alt="Commercialisation des légumes"><div class="step-body"><span class="step-number">ÉTAPE 08</span><h4>Commercialisation</h4><p>Tri, conditionnement et mise sur le marché.</p></div></div>
+</div></div></section>
 
-      <article class="card culture-detail" id="legumes">
-        <img src="images/legumes.jpg" alt="Culture de légumes">
-        <div class="card-body">
-          <h3>Légumes</h3>
-          <p>Production maraîchère adaptée aux besoins du marché et aux possibilités d'irrigation.</p>
-          <a class="link" href="#fiche-legumes">Voir la fiche →</a>
-        </div>
-      </article>
+<section id="culture-ananas" class="culture-section">
+<div class="container">
+<div class="culture-head"><img src="images/ananas.jpg" alt="Culture de l’ananas"><div><span class="eyebrow">FICHE CULTURE • 04</span><h3>Culture de l’ananas</h3><p>De l’installation des plants à la récolte et à la commercialisation des fruits.</p></div></div>
+<div class="steps">
+<div class="step-card"><img src="images/ananas-preparation.svg" alt="Préparation ananas"><div class="step-body"><span class="step-number">ÉTAPE 01</span><h4>Préparation</h4><p>Préparation et organisation de la parcelle.</p></div></div>
+<div class="step-card"><img src="images/ananas-plantation.svg" alt="Plantation ananas"><div class="step-body"><span class="step-number">ÉTAPE 02</span><h4>Plantation</h4><p>Installation des rejets et plants sélectionnés.</p></div></div>
+<div class="step-card"><img src="images/ananas-entretien.svg" alt="Entretien ananas"><div class="step-body"><span class="step-number">ÉTAPE 03</span><h4>Entretien</h4><p>Désherbage et suivi des plants.</p></div></div>
+<div class="step-card"><img src="images/ananas-irrigation.svg" alt="Irrigation ananas"><div class="step-body"><span class="step-number">ÉTAPE 04</span><h4>Irrigation</h4><p>Gestion de l’eau selon les conditions de la parcelle.</p></div></div>
+<div class="step-card"><img src="images/ananas-protection.svg" alt="Protection ananas"><div class="step-body"><span class="step-number">ÉTAPE 05</span><h4>Protection</h4><p>Surveillance sanitaire et entretien.</p></div></div>
+<div class="step-card"><img src="images/ananas-croissance.svg" alt="Croissance ananas"><div class="step-body"><span class="step-number">ÉTAPE 06</span><h4>Croissance</h4><p>Suivi du développement jusqu’à la maturité.</p></div></div>
+<div class="step-card"><img src="images/ananas-recolte.svg" alt="Récolte ananas"><div class="step-body"><span class="step-number">ÉTAPE 07</span><h4>Récolte</h4><p>Récolte et manipulation des fruits.</p></div></div>
+<div class="step-card"><img src="images/ananas-commercialisation.svg" alt="Commercialisation ananas"><div class="step-body"><span class="step-number">ÉTAPE 08</span><h4>Commercialisation</h4><p>Tri, conditionnement et recherche de débouchés.</p></div></div>
+</div></div></section>
 
-      <article class="card culture-detail" id="ananas">
-        <img src="images/ananas.jpg" alt="Culture d'ananas">
-        <div class="card-body">
-          <h3>Ananas</h3>
-          <p>Culture fruitière pouvant être développée dans des zones adaptées aux conditions de production.</p>
-          <a class="link" href="#fiche-ananas">Voir la fiche →</a>
-        </div>
-      </article>
 
-    </div>
-  </div>
-</section>
+<section id="terrains"><div class="container">
+<div class="section-title"><span>Nos espaces</span><h2>Terrains & exploitations</h2><p>Présentation des espaces agricoles et des équipements nécessaires au développement des exploitations.</p></div>
+<div class="terrain-grid">
+<div class="terrain"><img src="images/terrain1.jpg" alt="Terrain agricole"><div class="terrain-info"><h3>Terrains disponibles</h3><p>Des parcelles peuvent être intégrées au programme selon leur localisation et leur potentiel.</p></div></div>
+<div class="terrain"><img src="images/terrain2.jpg" alt="Exploitation agricole"><div class="terrain-info"><h3>Exploitation</h3><p>Organisation des parcelles selon les cultures retenues.</p></div></div>
+<div class="terrain"><img src="images/irrigation.jpg" alt="Irrigation agricole"><div class="terrain-info"><h3>Irrigation</h3><p>Des solutions d’irrigation peuvent améliorer la régularité de la production.</p></div></div>
+<div class="terrain"><img src="images/recolte.jpg" alt="Récolte agricole"><div class="terrain-info"><h3>Production & récolte</h3><p>Accompagnement de la production jusqu’à sa valorisation.</p></div></div>
+</div></div></section>
 
-<section id="fiches">
-  <div class="container">
-    <div class="section-title">
-      <span>Fiches personnalisées</span>
-      <h2>Présentation des cultures</h2>
-      <p>Les informations peuvent être enrichies progressivement selon les projets et les zones d'exploitation.</p>
-    </div>
+<section id="partenariat" class="cta"><div class="container">
+<h2>Partenariat gagnant-gagnant</h2><p>Financeurs, propriétaires de terres et partenaires du projet réunis autour d’un même objectif : développer des activités agricoles créatrices de valeur.</p>
+<div class="buttons" style="justify-content:center"><a class="btn primary" href="#contact">Participer au programme</a></div>
+</div></section>
 
-    <div class="process">
-
-      <div class="step" id="fiche-mais">
-        <div class="number">01</div>
-        <h3>Maïs</h3>
-        <p><strong>Objectif :</strong> produire et valoriser le maïs sur des parcelles adaptées.</p>
-        <p><strong>Points à étudier :</strong> préparation du terrain, semis, entretien, protection, récolte et commercialisation.</p>
-      </div>
-
-      <div class="step" id="fiche-manioc">
-        <div class="number">02</div>
-        <h3>Manioc</h3>
-        <p><strong>Objectif :</strong> développer une production régulière destinée à l'alimentation et à la transformation.</p>
-        <p><strong>Points à étudier :</strong> choix des boutures, plantation, entretien, récolte et débouchés.</p>
-      </div>
-
-      <div class="step" id="fiche-legumes">
-        <div class="number">03</div>
-        <h3>Légumes</h3>
-        <p><strong>Objectif :</strong> développer le maraîchage avec une bonne maîtrise de l'eau et des cycles de production.</p>
-        <p><strong>Points à étudier :</strong> pépinière, plantation, irrigation, entretien, récolte et vente.</p>
-      </div>
-
-      <div class="step" id="fiche-ananas">
-        <div class="number">04</div>
-        <h3>Ananas</h3>
-        <p><strong>Objectif :</strong> mettre en place une production fruitière organisée et adaptée au terrain.</p>
-        <p><strong>Points à étudier :</strong> implantation, entretien, maturation, récolte et commercialisation.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ETAPES CULTURES GWP -->
-<section id="culture-mais" class="culture-section"><div class="container"><div class="culture-head"><img src="images/mais.jpg" alt="Culture du maïs"><div><span class="eyebrow">FICHE CULTURE • 01</span><h3>Culture du maïs</h3><p>De la préparation de la parcelle à la récolte et à la valorisation de la production.</p></div></div><div class="steps"><div class="step-card"><img src="images/mais-preparation.svg" alt="Préparation du terrain pour le maïs"><div class="step-body"><span class="step-number">ÉTAPE 01</span><h4>Préparation du terrain</h4><p>Nettoyage, travail du sol, nivellement et préparation d’une parcelle adaptée.</p></div></div><div class="step-card"><img src="images/mais-semis.svg" alt="Semis du maïs"><div class="step-body"><span class="step-number">ÉTAPE 02</span><h4>Semis</h4><p>Choix des semences, implantation régulière et respect des espacements.</p></div></div><div class="step-card"><img src="images/mais-entretien.svg" alt="Entretien du maïs"><div class="step-body"><span class="step-number">ÉTAPE 03</span><h4>Entretien</h4><p>Désherbage, fertilisation, observation des plants et gestion de l’eau.</p></div></div><div class="step-card"><img src="images/mais-protection.svg" alt="Protection du maïs"><div class="step-body"><span class="step-number">ÉTAPE 04</span><h4>Protection</h4><p>Surveillance régulière et interventions adaptées pour protéger la culture.</p></div></div><div class="step-card"><img src="images/mais-croissance.svg" alt="Croissance du maïs"><div class="step-body"><span class="step-number">ÉTAPE 05</span><h4>Croissance</h4><p>Suivi du développement des plants et contrôle des conditions de production.</p></div></div><div class="step-card"><img src="images/mais-recolte.svg" alt="Récolte du maïs"><div class="step-body"><span class="step-number">ÉTAPE 06</span><h4>Récolte</h4><p>Récolte au stade approprié, tri et première préparation de la production.</p></div></div><div class="step-card"><img src="images/mais-stockage.svg" alt="Stockage du maïs"><div class="step-body"><span class="step-number">ÉTAPE 07</span><h4>Stockage</h4><p>Séchage, conditionnement et conservation dans de bonnes conditions.</p></div></div><div class="step-card"><img src="images/mais-commercialisation.svg" alt="Commercialisation du maïs"><div class="step-body"><span class="step-number">ÉTAPE 08</span><h4>Commercialisation</h4><p>Organisation de la vente et recherche de débouchés pour valoriser la production.</p></div></div></div></div></section>
-
-<section id="culture-manioc" class="culture-section"><div class="container"><div class="culture-head"><img src="images/manioc.jpg" alt="Culture du manioc"><div><span class="eyebrow">FICHE CULTURE • 02</span><h3>Culture du manioc</h3><p>Une fiche structurée autour de l’implantation, de l’entretien, de la maturation et de la récolte.</p></div></div><div class="steps"><div class="step-card"><img src="images/manioc-preparation.svg" alt="Préparation terrain manioc"><div class="step-body"><span class="step-number">ÉTAPE 01</span><h4>Préparation du terrain</h4><p>Nettoyage, préparation du sol et organisation des lignes de plantation.</p></div></div><div class="step-card"><img src="images/manioc-plantation.svg" alt="Plantation du manioc"><div class="step-body"><span class="step-number">ÉTAPE 02</span><h4>Plantation</h4><p>Sélection des boutures et mise en terre selon un espacement adapté.</p></div></div><div class="step-card"><img src="images/manioc-entretien.svg" alt="Entretien du manioc"><div class="step-body"><span class="step-number">ÉTAPE 03</span><h4>Entretien</h4><p>Désherbage, observation des plants et entretien de la parcelle.</p></div></div><div class="step-card"><img src="images/manioc-protection.svg" alt="Protection du manioc"><div class="step-body"><span class="step-number">ÉTAPE 04</span><h4>Protection</h4><p>Surveillance de la culture et mesures adaptées en cas de problèmes.</p></div></div><div class="step-card"><img src="images/manioc-croissance.svg" alt="Croissance du manioc"><div class="step-body"><span class="step-number">ÉTAPE 05</span><h4>Croissance</h4><p>Suivi du développement des plants jusqu’à leur maturité.</p></div></div><div class="step-card"><img src="images/manioc-recolte.svg" alt="Récolte du manioc"><div class="step-body"><span class="step-number">ÉTAPE 06</span><h4>Récolte</h4><p>Arrachage, tri et préparation des racines pour la valorisation.</p></div></div><div class="step-card"><img src="images/manioc-transformation.svg" alt="Transformation du manioc"><div class="step-body"><span class="step-number">ÉTAPE 07</span><h4>Transformation</h4><p>Possibilités de transformation selon les débouchés et les moyens disponibles.</p></div></div><div class="step-card"><img src="images/manioc-commercialisation.svg" alt="Commercialisation du manioc"><div class="step-body"><span class="step-number">ÉTAPE 08</span><h4>Commercialisation</h4><p>Conditionnement, recherche de marchés et valorisation de la production.</p></div></div></div></div></section>
-
-<section id="culture-legumes" class="culture-section"><div class="container"><div class="culture-head"><img src="images/legumes.jpg" alt="Culture des légumes"><div><span class="eyebrow">FICHE CULTURE • 03</span><h3>Culture des légumes</h3><p>Une chaîne de production maraîchère organisée autour de l’eau, du suivi des plants et de la récolte.</p></div></div><div class="steps"><div class="step-card"><img src="images/legumes-preparation.svg" alt="Préparation maraîchère"><div class="step-body"><span class="step-number">ÉTAPE 01</span><h4>Préparation</h4><p>Préparation des planches, amélioration du sol et organisation des espaces.</p></div></div><div class="step-card"><img src="images/legumes-semis.svg" alt="Semis des légumes"><div class="step-body"><span class="step-number">ÉTAPE 02</span><h4>Semis / pépinière</h4><p>Semis des espèces choisies et préparation des jeunes plants.</p></div></div><div class="step-card"><img src="images/legumes-plantation.svg" alt="Plantation des légumes"><div class="step-body"><span class="step-number">ÉTAPE 03</span><h4>Plantation</h4><p>Installation des plants avec des espacements adaptés.</p></div></div><div class="step-card"><img src="images/legumes-irrigation.svg" alt="Irrigation des légumes"><div class="step-body"><span class="step-number">ÉTAPE 04</span><h4>Irrigation</h4><p>Gestion régulière de l’eau et utilisation d’un système adapté.</p></div></div><div class="step-card"><img src="images/legumes-entretien.svg" alt="Entretien des légumes"><div class="step-body"><span class="step-number">ÉTAPE 05</span><h4>Entretien</h4><p>Désherbage, fertilisation, observation et maintien de la parcelle.</p></div></div><div class="step-card"><img src="images/legumes-protection.svg" alt="Protection des légumes"><div class="step-body"><span class="step-number">ÉTAPE 06</span><h4>Protection</h4><p>Surveillance des plants et interventions adaptées.</p></div></div><div class="step-card"><img src="images/legumes-recolte.svg" alt="Récolte des légumes"><div class="step-body"><span class="step-number">ÉTAPE 07</span><h4>Récolte</h4><p>Récolte progressive selon la maturité et les exigences du marché.</p></div></div><div class="step-card"><img src="images/legumes-commercialisation.svg" alt="Commercialisation des légumes"><div class="step-body"><span class="step-number">ÉTAPE 08</span><h4>Commercialisation</h4><p>Tri, conditionnement, transport et vente des produits frais.</p></div></div></div></div></section>
-
-<section id="culture-ananas" class="culture-section"><div class="container"><div class="culture-head"><img src="images/ananas.jpg" alt="Culture de l’ananas"><div><span class="eyebrow">FICHE CULTURE • 04</span><h3>Culture de l’ananas</h3><p>Une fiche complète pour suivre la culture fruitière depuis la préparation jusqu’à la commercialisation.</p></div></div><div class="steps"><div class="step-card"><img src="images/ananas-preparation.svg" alt="Préparation terrain ananas"><div class="step-body"><span class="step-number">ÉTAPE 01</span><h4>Préparation du terrain</h4><p>Nettoyage, préparation du sol et organisation des lignes de plantation.</p></div></div><div class="step-card"><img src="images/ananas-plantation.svg" alt="Plantation des ananas"><div class="step-body"><span class="step-number">ÉTAPE 02</span><h4>Plantation</h4><p>Sélection des plants et implantation régulière dans une parcelle adaptée.</p></div></div><div class="step-card"><img src="images/ananas-entretien.svg" alt="Entretien des ananas"><div class="step-body"><span class="step-number">ÉTAPE 03</span><h4>Entretien</h4><p>Désherbage, suivi des plants et maintien de bonnes conditions de croissance.</p></div></div><div class="step-card"><img src="images/ananas-irrigation.svg" alt="Irrigation ananas"><div class="step-body"><span class="step-number">ÉTAPE 04</span><h4>Gestion de l’eau</h4><p>Suivi des besoins hydriques selon les conditions de la zone.</p></div></div><div class="step-card"><img src="images/ananas-protection.svg" alt="Protection des ananas"><div class="step-body"><span class="step-number">ÉTAPE 05</span><h4>Protection</h4><p>Observation régulière et gestion adaptée des risques.</p></div></div><div class="step-card"><img src="images/ananas-croissance.svg" alt="Croissance des ananas"><div class="step-body"><span class="step-number">ÉTAPE 06</span><h4>Croissance</h4><p>Suivi du développement des plants jusqu’à la formation des fruits.</p></div></div><div class="step-card"><img src="images/ananas-recolte.svg" alt="Récolte des ananas"><div class="step-body"><span class="step-number">ÉTAPE 07</span><h4>Récolte</h4><p>Récolte au stade approprié, tri et préparation des fruits.</p></div></div><div class="step-card"><img src="images/ananas-commercialisation.svg" alt="Commercialisation des ananas"><div class="step-body"><span class="step-number">ÉTAPE 08</span><h4>Commercialisation</h4><p>Conditionnement, transport et recherche de débouchés.</p></div></div></div></div></section>
-
-<section id="terrains">
-  <div class="container">
-    <div class="section-title">
-      <span>Patrimoine agricole</span>
-      <h2>Terrains et exploitations</h2>
-      <p>Présentation des terres disponibles et des espaces déjà exploités dans le cadre du développement du programme.</p>
-    </div>
-
-    <div class="terrain-grid">
-      <article class="terrain">
-        <img src="images/terrain1.jpg" alt="Terrain agricole 1">
-        <div class="terrain-info">
-          <h3>Terrain agricole</h3>
-          <p>Espace destiné à l'étude et au développement d'une exploitation adaptée à la zone.</p>
-        </div>
-      </article>
-
-      <article class="terrain">
-        <img src="images/terrain2.jpg" alt="Terrain agricole 2">
-        <div class="terrain-info">
-          <h3>Zone d'exploitation</h3>
-          <p>Présentation d'une parcelle pouvant accueillir différentes productions agricoles.</p>
-        </div>
-      </article>
-
-      <article class="terrain">
-        <img src="images/irrigation.jpg" alt="Système d'irrigation agricole">
-        <div class="terrain-info">
-          <h3>Irrigation</h3>
-          <p>La maîtrise de l'eau permet d'améliorer l'organisation et la régularité de certaines productions.</p>
-        </div>
-      </article>
-
-      <article class="terrain">
-        <img src="images/recolte.jpg" alt="Récolte sur une exploitation">
-        <div class="terrain-info">
-          <h3>Production et récolte</h3>
-          <p>Suivi des cultures jusqu'à la récolte et à la valorisation des produits.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="partenariat">
-  <div class="container">
-    <div class="section-title">
-      <span>Notre modèle</span>
-      <h2>Un partenariat gagnant-gagnant</h2>
-      <p>Le programme repose sur la complémentarité des ressources et des compétences.</p>
-    </div>
-
-    <div class="partnership-grid">
-      <div class="text-box">
-        <h3>Financeurs + propriétaires de terres + partenaires</h3>
-        <p>
-          G.W².P propose une organisation dans laquelle chaque partenaire peut
-          contribuer au développement du projet selon ses possibilités et son rôle.
-        </p>
-        <ul class="check-list">
-          <li><strong>Financeurs :</strong> participation au financement des projets.</li>
-          <li><strong>Propriétaires de terres :</strong> mise à disposition et valorisation des parcelles.</li>
-          <li><strong>Partenaires :</strong> compétences, organisation, production et accompagnement.</li>
-          <li><strong>Projet :</strong> choix des cultures et planification selon la zone.</li>
-        </ul>
-      </div>
-      <div class="partnership-image">
-        <img src="images/hero.jpg" alt="Partenariat pour un projet agricole">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container">
-    <h2>Construisons ensemble l'agriculture de demain</h2>
-    <p>
-      Rejoignez le programme G.W².P et participons ensemble à la valorisation
-      des terres et au développement d'une agriculture créatrice de valeur.
-    </p>
-    <a class="btn primary" href="#contact">Prendre contact</a>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <div class="section-title">
-      <span>Contact</span>
-      <h2>Parlons de votre projet</h2>
-      <p>Pour présenter un terrain, rechercher un partenariat ou discuter d'un projet agricole.</p>
-    </div>
-
-    <div class="contact-box">
-      <div class="contact-item">
-        <strong>Programme</strong>
-        <span>G.W².P GREEN WEALTH WAY PROGRAMME</span>
-      </div>
-      <div class="contact-item">
-        <strong>Téléphone</strong>
-        <span>242.06.429.86.80</span>
-      </div>
-      <div class="contact-item">
-        <strong>Zone</strong>
-        <span>République du Congo</span>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section id="contact"><div class="container">
+<div class="section-title"><span>Nous contacter</span><h2>Contactez G.W².P</h2><p>Pour présenter un terrain, discuter d’un financement ou rejoindre le programme.</p></div>
+<div class="contact-box">
+<div class="contact-item"><strong>Téléphone</strong><span>242.06.429.86.80</span></div>
+<div class="contact-item"><strong>Zone</strong><span>République du Congo</span></div>
+<div class="contact-item"><strong>Activité</strong><span>Développement agricole</span></div>
+</div>
+<div style="text-align:center;margin-top:25px"><a class="btn primary" href="tel:+242064298680">Appeler maintenant</a></div>
+</div></section>
 </main>
 
-<footer>
-  <div class="container">
-    <img src="images/logo.png" alt="Logo G.W².P">
-    <p><strong>G.W².P — GREEN WEALTH WAY PROGRAMME</strong></p>
-    <p>Développons ensemble une agriculture créatrice de valeur.</p>
-    <p>© 2026 G.W².P — Tous droits réservés.</p>
-  </div>
-</footer>
-
+<footer><img src="images/logo.png" alt="Logo G.W².P"><p><strong>G.W².P GREEN WEALTH WAY PROGRAMME</strong></p><p>© 2026 — Tous droits réservés.</p></footer>
 </body>
 </html>
