@@ -1,8 +1,10 @@
 G.W².P — GREEN WEALTH WAY PROGRAMME
 
-Fichier principal : index.html
+VERSION CORRIGÉE — SITE AVEC LOGO ET IMAGES LOCALES
 
-Pour GitHub Pages :
-1. Téléverser index.html dans le dépôt.
-2. Dans Settings > Pages, sélectionner la branche de publication.
-3. Enregistrer puis ouvrir l'adresse GitHub Pages du dépôt.
+Contenu :
+- index.html
+- dossier images/ contenant le logo officiel fourni et toutes les illustrations du site
+
+Important : téléversez le DOSSIER COMPLET (index.html + images/) dans votre dépôt GitHub.
+Le logo utilisé est celui fourni par le promoteur, sans modification de sa forme.

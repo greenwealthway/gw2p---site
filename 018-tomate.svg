@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-label="Tomate">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dff5ff"/><stop offset="1" stop-color="#f8fff5"/></linearGradient><linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#7b5435"/><stop offset="1" stop-color="#3f2b1e"/></linearGradient></defs>
+<rect width="900" height="520" fill="url(#sky)"/><circle cx="750" cy="90" r="52" fill="#ffd166" opacity=".9"/>
+<path d="M0 260 Q180 170 360 250 T720 230 T900 250 V520 H0Z" fill="#7eb56a"/><path d="M0 320 Q200 250 430 330 T900 300 V520 H0Z" fill="url(#soil)"/>
+<g opacity=".5" stroke="#b77a4c" stroke-width="4"><path d="M20 350 Q90 325 160 350"/><path d="M180 350 Q250 325 320 350"/><path d="M340 350 Q410 325 480 350"/><path d="M500 350 Q570 325 640 350"/><path d="M660 350 Q730 325 800 350"/></g>
+<g fill="#e53935" stroke="#214d25" stroke-width="5">
+<path d="M90 365 q-8 -65 0 -105 q18 20 15 52 q28 -25 45 -13 q-13 40 -55 56 q45 -4 55 18 q-30 27 -60 2z"/><path d="M215 365 q-8 -65 0 -105 q18 20 15 52 q28 -25 45 -13 q-13 40 -55 56 q45 -4 55 18 q-30 27 -60 2z"/><path d="M340 365 q-8 -65 0 -105 q18 20 15 52 q28 -25 45 -13 q-13 40 -55 56 q45 -4 55 18 q-30 27 -60 2z"/><path d="M465 365 q-8 -65 0 -105 q18 20 15 52 q28 -25 45 -13 q-13 40 -55 56 q45 -4 55 18 q-30 27 -60 2z"/><path d="M590 365 q-8 -65 0 -105 q18 20 15 52 q28 -25 45 -13 q-13 40 -55 56 q45 -4 55 18 q-30 27 -60 2z"/><path d="M715 365 q-8 -65 0 -105 q18 20 15 52 q28 -25 45 -13 q-13 40 -55 56 q45 -4 55 18 q-30 27 -60 2z"/>
+</g>
+<rect x="34" y="34" width="310" height="62" rx="20" fill="#0f3524" opacity=".92"/><text x="58" y="76" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="white">Tomate</text>
+<text x="450" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="21" fill="white" opacity=".9">G.W².P • GREEN WEALTH WAY PROGRAMME</text></svg>
