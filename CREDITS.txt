@@ -1,5 +1,7 @@
-G.W².P — correction des images des étapes
+G.W².P — Images d’étapes séparées
 
-Les images d’étapes non fonctionnelles provenant de LoremFlickr ont été remplacées par des visuels photoréalistes générés dynamiquement, avec un prompt spécifique à chaque culture et à chaque étape. Le maïs conserve ses images existantes.
+Les images des étapes ont été séparées à partir de deux planches visuelles générées pour ce projet, puis intégrées localement dans le site.
+Le maïs conserve volontairement ses images d’étapes existantes.
+Les autres cultures utilisent un dossier distinct avec 8 images (étape 1 à étape 8).
 
-Un mécanisme de secours affiche l’image principale de la culture si le service d’image distant n’est pas disponible.
+Culture + action : préparation du terrain, préparation du sol, semis/plantation, fertilisation, entretien/désherbage, irrigation, protection, récolte.
