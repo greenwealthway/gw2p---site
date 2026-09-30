@@ -1,7 +1,5 @@
-G.W².P — Images d’étapes séparées
+G.W².P — évolution 4K professionnelle
 
-Les images des étapes ont été séparées à partir de deux planches visuelles générées pour ce projet, puis intégrées localement dans le site.
-Le maïs conserve volontairement ses images d’étapes existantes.
-Les autres cultures utilisent un dossier distinct avec 8 images (étape 1 à étape 8).
-
-Culture + action : préparation du terrain, préparation du sol, semis/plantation, fertilisation, entretien/désherbage, irrigation, protection, récolte.
+Base conservée : structure du site et 8 étapes par culture.
+Images d’étapes : versions locales optimisées (1920 px de large, WebP haute qualité) pour un affichage net sur mobile et ordinateur.
+Aucune dépendance à une URL externe pour les images du site.
