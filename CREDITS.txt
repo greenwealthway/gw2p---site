@@ -1,7 +1,5 @@
-G.W².P — Images des étapes culturales
+G.W².P — correction des images des étapes
 
-Maïs : images existantes conservées volontairement.
-Autres cultures : 8 recherches photographiques distinctes par culture et par opération agricole : land preparation, soil preparation, planting, fertilizing, weeding, irrigation, crop protection et harvesting. Les photos de l'étape ne reprennent donc plus automatiquement la photo principale de la culture.
+Les images d’étapes non fonctionnelles provenant de LoremFlickr ont été remplacées par des visuels photoréalistes générés dynamiquement, avec un prompt spécifique à chaque culture et à chaque étape. Le maïs conserve ses images existantes.
 
-Les photos sont chargées en ligne depuis Flickr via LoremFlickr. Une connexion Internet est nécessaire pour afficher les images des étapes.
-Le logo G.W².P et la structure du site sont conservés.
+Un mécanisme de secours affiche l’image principale de la culture si le service d’image distant n’est pas disponible.
