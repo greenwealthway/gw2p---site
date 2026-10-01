@@ -135,7 +135,25 @@ function sendProjectWhatsApp(){
 <p>Envoyez quelques informations simples : <strong>nom, profil, localisation souhaitée, type de projet, cultures d'intérêt et objectif.</strong> Les détails du projet pourront ensuite être étudiés au cas par cas.</p>
 </div><div class="project-actions"><a class="project-btn" href="https://wa.me/242064298680?text=Bonjour%20G.W%C2%B2.P%2C%20je%20suis%20financeur%20et%20je%20souhaite%20%C3%A9tudier%20un%20projet%20agricole." target="_blank" rel="noopener">💬 Écrire à G.W².P</a><a class="project-btn alt" href="#mon-projet">Voir la présentation d'un projet</a></div></div>
 <p class="small finance-note">Les informations présentées sur le site constituent une base de présentation. Les conditions, besoins, modalités de financement et éventuels accords de chaque projet doivent être étudiés au cas par cas entre les parties concernées.</p>
-</div></section><section class="section" id="partenariat"><div class="wrap"><h2>Partenariat gagnant-gagnant</h2><p class="lead">Le modèle G.W².P rapproche les ressources financières, les terres disponibles et les compétences opérationnelles pour construire des projets agricoles structurés.</p><div class="info-grid"><div class="info"><h3>Financeurs</h3><p>Participer au financement de projets agricoles identifiés et documentés.</p></div><div class="info"><h3>Propriétaires de terres</h3><p>Mettre à disposition des parcelles adaptées à une exploitation organisée.</p></div><div class="info"><h3>Partenaires</h3><p>Apporter compétences, moyens techniques, suivi et accès aux marchés.</p></div></div></div></section><section class="section" id="suggestions">
+</div></section><section class="section" id="partenariat"><div class="wrap"><h2>Partenariat gagnant-gagnant</h2><p class="lead">Le modèle G.W².P rapproche les ressources financières, les terres disponibles et les compétences opérationnelles pour construire des projets agricoles structurés.</p><div class="info-grid"><div class="info"><h3>Financeurs</h3><p>Participer au financement de projets agricoles identifiés et documentés.</p></div><div class="info"><h3>Propriétaires de terres</h3><p>Mettre à disposition des parcelles adaptées à une exploitation organisée.</p></div><div class="info"><h3>Partenaires</h3><p>Apporter compétences, moyens techniques, suivi et accès aux marchés.</p></div></div></div></section>
+<section class="section" id="partenariat-formulaire">
+<div class="wrap project-box">
+  <div class="section-head"><div><div class="eyebrow">PROPOSITION DE PARTENARIAT</div><h2>Présenter une proposition de partenariat</h2></div><p>Remplissez directement les informations ci-dessous. Elles seront préparées automatiquement dans un message WhatsApp avant l’envoi.</p></div>
+  <div class="project-form">
+    <div class="form-field"><label for="ptNom">Nom / structure</label><input id="ptNom" type="text" placeholder="Votre nom ou nom de votre structure"></div>
+    <div class="form-field"><label for="ptTel">Téléphone / WhatsApp</label><input id="ptTel" type="tel" placeholder="Votre numéro"></div>
+    <div class="form-field"><label for="ptLocalisation">Localisation</label><input id="ptLocalisation" type="text" placeholder="Ville, département, zone ou pays"></div>
+    <div class="form-field"><label for="ptType">Type de partenaire</label><select id="ptType"><option value="">Sélectionnez</option><option>Partenaire technique</option><option>Partenaire commercial</option><option>Fournisseur</option><option>Prestataire de services</option><option>Partenaire institutionnel</option><option>Autre</option></select></div>
+    <div class="form-field"><label for="ptDomaine">Domaine d’activité</label><input id="ptDomaine" type="text" placeholder="Ex. agriculture, matériel, transport, commerce..."></div>
+    <div class="form-field"><label for="ptProjet">Projet / culture concerné(e)</label><input id="ptProjet" type="text" placeholder="Ex. maraîchage, maïs, manioc..."></div>
+    <div class="form-field full"><label for="ptObjet">Objet de la proposition</label><input id="ptObjet" type="text" placeholder="Expliquez brièvement votre proposition"></div>
+    <div class="form-field full"><label for="ptMoyens">Moyens ou ressources disponibles</label><input id="ptMoyens" type="text" placeholder="Ex. compétences, matériel, réseau commercial, terrain, services..."></div>
+    <div class="form-field full"><label for="ptDescription">Description du partenariat proposé</label><textarea id="ptDescription" rows="5" placeholder="Décrivez votre proposition, votre rôle et ce que vous souhaitez construire avec G.W².P."></textarea></div>
+  </div>
+  <div class="project-actions"><button class="project-btn" type="button" onclick="sendPartnershipWhatsApp()">💬 Envoyer ma proposition par WhatsApp</button><a class="project-btn alt" href="#contact">📞 Voir les contacts</a></div>
+  <p class="project-note">Le bouton prépare votre proposition dans WhatsApp. Vous devez ensuite appuyer sur « Envoyer » dans WhatsApp.</p>
+</div></section>
+<section class="section" id="suggestions">
 <div class="wrap">
 <div class="section-head"><div><div class="eyebrow">PARTICIPATION</div><h2>Vos suggestions pour G.W².P</h2></div><p>Votre avis peut contribuer à améliorer le programme, le site et les services proposés.</p></div>
 <div class="suggestion-box">
@@ -218,8 +236,29 @@ function sendProjectWhatsApp(){
 })();
 </script>
 <script>
+function sendPartnershipWhatsApp(){
+ const lines=[
+ 'Bonjour G.W².P 🌱, je souhaite proposer un partenariat.',
+ '',
+ 'Nom / structure : '+(gwVal('ptNom')||'Non renseigné'),
+ 'Téléphone / WhatsApp : '+(gwVal('ptTel')||'Non renseigné'),
+ 'Localisation : '+(gwVal('ptLocalisation')||'Non renseignée'),
+ 'Type de partenaire : '+(gwVal('ptType')||'Non renseigné'),
+ 'Domaine d’activité : '+(gwVal('ptDomaine')||'Non renseigné'),
+ 'Projet / culture concerné(e) : '+(gwVal('ptProjet')||'Non renseigné'),
+ 'Objet de la proposition : '+(gwVal('ptObjet')||'Non renseigné'),
+ 'Moyens ou ressources disponibles : '+(gwVal('ptMoyens')||'Non renseigné'),
+ '',
+ 'Description du partenariat : '+(gwVal('ptDescription')||'Non renseignée')
+ ].join('\n');
+ window.open('https://wa.me/242064298680?text='+encodeURIComponent(lines),'_blank','noopener');
+}
 function sendSuggestionWhatsApp(){var type=document.getElementById('suggestion-type').value;var name=document.getElementById('suggestion-name').value.trim();var message=document.getElementById('suggestion-message').value.trim();if(!message){alert('Veuillez écrire votre suggestion avant de l’envoyer.');document.getElementById('suggestion-message').focus();return;}var text='Bonjour G.W².P, je souhaite proposer une suggestion.\n\nType : '+type+'\n'+(name?'Nom : '+name+'\n':'')+'Suggestion : '+message;window.open('https://wa.me/242064298680?text='+encodeURIComponent(text),'_blank');}
 </script>
+
+<style id="gw2p-partnership-form-style">
+#partenariat-formulaire{background:#fff}.project-box{background:linear-gradient(135deg,#f8f5ec,#eef4ef);border-radius:18px;padding:28px 22px;box-shadow:0 8px 28px #0000000d}.project-box .section-head{margin-bottom:20px}.project-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.project-form .form-field{display:flex;flex-direction:column;gap:7px}.project-form .form-field.full{grid-column:1/-1}.project-form label{font-weight:800;color:#0f3524;font-size:14px}.project-form input,.project-form select,.project-form textarea{width:100%;border:1px solid #0f352433;border-radius:10px;padding:12px 13px;background:#fff;font:inherit;color:#183b2b;outline:none}.project-form input:focus,.project-form select:focus,.project-form textarea:focus{border-color:#d4af37;box-shadow:0 0 0 3px #d4af3730}.project-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.project-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border:0;border-radius:12px;background:#0f3524;color:#fff;text-decoration:none;font-weight:800;cursor:pointer}.project-btn.alt{background:#d4af37;color:#0f3524}.project-note{margin-top:14px;padding:12px 14px;border-left:4px solid #d4af37;background:#fff8df;border-radius:8px;font-size:14px}@media(max-width:650px){.project-form{grid-template-columns:1fr}.project-form .form-field.full{grid-column:auto}.project-actions{flex-direction:column}.project-btn{width:100%;text-align:center}}
+</style>
 
 <style id="gw2p-contact-final-style">
 .contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.contact-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;border:1px solid #0f3524;color:#0f3524;background:#fff;text-decoration:none;font-weight:800;box-shadow:0 5px 16px #0001}.contact-btn.primary{background:#d4af37;border-color:#d4af37;color:#0f3524}.contact-btn.whatsapp{background:#0f3524;border-color:#0f3524;color:#fff}.contact-roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.contact-roles a{font-size:13px;color:#0f3524;background:#eef4ef;border-radius:999px;padding:7px 10px;text-decoration:none}.contact-box-note{margin-top:12px;color:#fff;opacity:.82;font-size:14px}@media(max-width:650px){.contact-actions{flex-direction:column}.contact-btn{width:100%}.contact-roles{flex-direction:column}.contact-roles a{text-align:center}}
