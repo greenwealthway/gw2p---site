@@ -101,27 +101,29 @@ body{padding-top:150px!important}
 <p class="suggestion-note">Le bouton ouvre WhatsApp avec votre suggestion préparée. Aucun compte ni serveur n’est nécessaire.</p>
 </div></div></section>
 <section class="section alt" id="contact"><div class="wrap contact"><div><section id="mon-projet" class="project-box wrap" style="margin-bottom:30px;">
+  <div class="section-head"><div><div class="eyebrow">VOTRE PROJET</div><h2>Présenter mon projet</h2></div><p>Quelques informations simples permettent à G.W².P de mieux comprendre votre projet et de préparer le premier échange.</p></div>
   <div class="project-grid">
     <div class="project-card">
-      <h2>Présenter mon projet</h2>
-      <p>Vous avez un terrain, un projet agricole, une capacité de financement ou une proposition de partenariat ? Présentez les éléments essentiels de votre projet à G.W².P.</p>
-      <div class="project-actions">
-        <a class="project-btn alt" href="#contact">Contacter G.W².P</a>
-        <a class="project-btn" href="https://wa.me/242064298680?text=Bonjour%20G.W%C2%B2.P%2C%20je%20souhaite%20pr%C3%A9senter%20un%20projet%20agricole.">Présenter par WhatsApp</a>
-      </div>
-      <p class="project-note">Les informations transmises servent à présenter le projet et à faciliter les premiers échanges.</p>
-    </div>
-    <div class="project-card">
-      <h3>Informations à préparer</h3>
+      <h3>📋 Les informations à préparer</h3>
       <ul>
-        <li><strong>Localisation :</strong> zone et commune du terrain.</li>
-        <li><strong>Terrain :</strong> superficie disponible et état d’exploitation.</li>
-        <li><strong>Cultures :</strong> cultures envisagées ou déjà exploitées.</li>
-        <li><strong>Rôle :</strong> financeur, propriétaire de terre ou partenaire.</li>
-        <li><strong>Objectif :</strong> production, développement ou partenariat agricole.</li>
+        <li><strong>1. Votre profil :</strong> financeur, propriétaire de terre, porteur de projet ou partenaire.</li>
+        <li><strong>2. Localisation :</strong> département, commune ou zone du projet.</li>
+        <li><strong>3. Terrain :</strong> superficie disponible et état d’exploitation, si vous disposez d’un terrain.</li>
+        <li><strong>4. Agriculture :</strong> cultures envisagées ou déjà exploitées.</li>
+        <li><strong>5. Objectif :</strong> production, développement agricole, financement ou partenariat.</li>
       </ul>
     </div>
+    <div class="project-card project-checklist">
+      <h3>🌱 Avant de nous contacter</h3>
+      <p>Préparez ces éléments si vous les connaissez. Il n’est pas nécessaire d’avoir toutes les informations pour prendre contact.</p>
+      <div class="project-mini-grid"><div>📍 Zone / localisation</div><div>📐 Superficie</div><div>🌾 Culture(s)</div><div>🤝 Votre rôle</div><div>🎯 Objectif</div><div>💬 Votre besoin</div></div>
+      <div class="project-actions">
+        <a class="project-btn" href="https://wa.me/242064298680?text=Bonjour%20G.W%C2%B2.P%20%F0%9F%8C%B1%2C%20je%20souhaite%20pr%C3%A9senter%20mon%20projet.%0A%0AMon%20profil%20%3A%20________________.%0ALocalisation%20%3A%20________________.%0ASuperficie%20%3A%20________________.%0ACulture(s)%20%3A%20________________.%0AObjectif%20%3A%20________________.%0ABesoin%20ou%20proposition%20%3A%20________________." target="_blank" rel="noopener">💬 Présenter mon projet par WhatsApp</a>
+        <a class="project-btn alt" href="#contact">📞 Voir les contacts</a>
+      </div>
+    </div>
   </div>
+  <p class="project-note">Les informations transmises servent à présenter le projet et à faciliter les premiers échanges. Chaque projet peut être étudié selon sa zone, ses objectifs et les éléments disponibles.</p>
 </section>
 
 <h2>Contactez G.W².P</h2><p class="lead">Présentez votre terrain, votre capacité de financement ou votre domaine de partenariat. Le projet peut ensuite être étudié selon la zone et les objectifs.</p>
@@ -180,5 +182,10 @@ function sendSuggestionWhatsApp(){var type=document.getElementById('suggestion-t
 
 <style id="gw2p-contact-final-style">
 .contact-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.contact-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:12px;border:1px solid #0f3524;color:#0f3524;background:#fff;text-decoration:none;font-weight:800;box-shadow:0 5px 16px #0001}.contact-btn.primary{background:#d4af37;border-color:#d4af37;color:#0f3524}.contact-btn.whatsapp{background:#0f3524;border-color:#0f3524;color:#fff}.contact-roles{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.contact-roles a{font-size:13px;color:#0f3524;background:#eef4ef;border-radius:999px;padding:7px 10px;text-decoration:none}.contact-box-note{margin-top:12px;color:#fff;opacity:.82;font-size:14px}@media(max-width:650px){.contact-actions{flex-direction:column}.contact-btn{width:100%}.contact-roles{flex-direction:column}.contact-roles a{text-align:center}}
+</style>
+
+<style id="gw2p-project-presentation-style">
+.project-checklist{background:linear-gradient(135deg,#f8f5ec,#eef4ef)}
+.project-mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:18px 0}.project-mini-grid div{padding:10px 12px;border-radius:10px;background:#fff;border:1px solid #0f352422;font-size:13px;font-weight:700;color:#0f3524}.project-note{margin-top:16px;padding:12px 14px;border-left:4px solid #d4af37;background:#fff8df;border-radius:8px;font-size:14px}@media(max-width:650px){.project-mini-grid{grid-template-columns:1fr}.project-actions{flex-direction:column}.project-actions .project-btn{width:100%;text-align:center}}
 </style>
 </body></html>
